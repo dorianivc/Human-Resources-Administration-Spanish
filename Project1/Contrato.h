@@ -1,24 +1,22 @@
 #pragma once
 #include "Empleado.h"
 #include "Herramientas.h"
-#include "Salario.h"
+#include "Puesto.h"
 using namespace std;
-class Contrato :public Empleado
+class Contrato :public NodoLista
 {
 private:
 	string fecha;
-	string puesto;
-	string descripcion;
-	Salario* salario;
+	Empleado* empleado;
+	Puesto* puesto;
+	//Salarios
 public:
-	Contrato(string, string, string, string, string, string, string, string, double);
+	Contrato(string, Empleado*, Puesto*);
+	Empleado* getEmpleado();
+	void setEmpleado(Empleado*);
+	Puesto* getPuesto();
+	void setPuesto(Puesto*);
 	string getFecha();
-	string getPuesto();
-	string getDescripcion();
-	void setPuesto(string);
-	void setDescripcion(string);
-	Salario* getSalario();
-	void setSalario(Salario*);
 	~Contrato();
 };
 

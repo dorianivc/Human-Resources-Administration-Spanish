@@ -10,6 +10,7 @@ Empleado::Empleado(string ced, string nom, string apell, string fNac, string dir
 	this->fechaNacimiento = fNac;
 	this->direccion = dir;
 	this->numeroTelefono = numTel;
+	
 }
 
 string Empleado::getNombre()

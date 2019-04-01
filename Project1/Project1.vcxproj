@@ -119,14 +119,25 @@
     <ClCompile Include="Contrato.cpp" />
     <ClCompile Include="Empleado.cpp" />
     <ClCompile Include="Herramientas.cpp" />
+    <ClCompile Include="Lista.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Nodo.cpp" />
+    <ClCompile Include="Planilla.cpp" />
+    <ClCompile Include="Puesto.cpp" />
     <ClCompile Include="Salario.cpp" />
+    <ClCompile Include="ServiciosProfesionales.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Contrato.h" />
     <ClInclude Include="Empleado.h" />
     <ClInclude Include="Herramientas.h" />
+    <ClInclude Include="Lista.h" />
+    <ClInclude Include="Nodo.h" />
+    <ClInclude Include="NodoLista.h" />
+    <ClInclude Include="Planilla.h" />
+    <ClInclude Include="Puesto.h" />
     <ClInclude Include="Salario.h" />
+    <ClInclude Include="ServiciosProfesionales.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

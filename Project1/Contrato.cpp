@@ -2,12 +2,32 @@
 
 
 
-Contrato::Contrato(string ced, string nom, string apell, string fechaN, string dir, string telefono, string puesto, string desc, double monto):Empleado(ced, nom, apell, fechaN, dir, telefono)
+Contrato::Contrato(string fecha, Empleado* empl, Puesto* pues)
 {
-	fecha = Herramientas::obtenerFecha();
-	this->puesto = puesto;
-	descripcion = desc;
-	salario = new Salario(monto);
+	this->fecha = fecha;
+	empleado = empl;
+	puesto = pues;
+	
+}
+
+Empleado * Contrato::getEmpleado()
+{
+	return empleado;
+}
+
+void Contrato::setEmpleado(Empleado * p)
+{
+	empleado = p;
+}
+
+Puesto * Contrato::getPuesto()
+{
+	return puesto;
+}
+
+void Contrato::setPuesto(Puesto * newPuesto)
+{
+	puesto = newPuesto;
 }
 
 string Contrato::getFecha()
@@ -15,38 +35,9 @@ string Contrato::getFecha()
 	return fecha;
 }
 
-string Contrato::getPuesto()
-{
-	return puesto;
-}
-
-string Contrato::getDescripcion()
-{
-	return descripcion;
-}
-
-void Contrato::setPuesto(string p)
-{
-	puesto = p;
-}
-
-void Contrato::setDescripcion(string j)
-{
-	descripcion = j;
-}
-
-Salario * Contrato::getSalario()
-{
-	return salario;
-}
-
-void Contrato::setSalario(Salario *p)
-{
-	salario = p;
-}
 
 
 Contrato::~Contrato()
 {
-	delete salario;
+	
 }
