@@ -54,6 +54,9 @@ int main()
 	
 
 	cin.get();
+	delete newPuesto2;
+	delete newServ;
+	delete newEmpleado2;
 	delete newEmpleado;
 	delete newPuesto;
 	delete newPlanilla;
