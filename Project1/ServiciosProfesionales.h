@@ -1,11 +1,13 @@
 #pragma once
 #include "Contrato.h"
+using namespace std;
 class ServiciosProfesionales :
 	public Contrato
 {private:
 	string fechaCesantia;
 public:
-	ServiciosProfesionales();
+	ServiciosProfesionales(string, Empleado*, Puesto*, string);
+	virtual const string toString();
 	~ServiciosProfesionales();
 };
 

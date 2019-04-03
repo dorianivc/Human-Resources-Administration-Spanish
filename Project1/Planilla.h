@@ -7,7 +7,8 @@ private:
 	bool esTemporal;
 
 public:
-	Planilla();
+	Planilla(string, Empleado*, Puesto*, bool);
+	virtual const string toString();
 	~Planilla();
 };
 

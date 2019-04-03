@@ -2,11 +2,12 @@
 
 
 
-Puesto::Puesto(string nom, string cod, string desc)
+Puesto::Puesto(string nom, string cod, string desc, double newSalarioBase)
 {
 	nombre = nom;
 	codigo = cod;
 	descripcion = desc;
+	salarioBase = newSalarioBase;
 }
 
 string Puesto::getNombre()
@@ -37,6 +38,16 @@ string Puesto::getDescripcion()
 void Puesto::setDescripcion(string desc)
 {
 	descripcion = desc;
+}
+
+const string Puesto::toString()
+{
+	stringstream p;
+	p << "Nombre del Puesto: " << nombre << endl;
+	p << "Codigo del Puesto: " << codigo << endl;
+	p << "Descripcion del Puesto: " << descripcion << endl;
+	p << "Salario Base: " << (int)salarioBase << endl;
+	return p.str();
 }
 
 Puesto::~Puesto()

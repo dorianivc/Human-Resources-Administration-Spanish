@@ -35,6 +35,16 @@ string Contrato::getFecha()
 	return fecha;
 }
 
+const string Contrato::toString()
+{
+	stringstream p;
+
+	p << "Fecha Inicio de Contrato: " << fecha << endl;
+	p <<"Empleado: "<< empleado->toString() << endl;
+	p << "Puesto: " << puesto->toString() << endl;
+	return p.str();
+}
+
 
 
 Contrato::~Contrato()

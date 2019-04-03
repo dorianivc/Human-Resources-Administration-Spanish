@@ -1,21 +1,18 @@
 #pragma once
 #include <string>
+#include <sstream>
+#include <iostream>
+#include <fstream>
 using namespace std;
 class NodoLista
 {
 public:
-	NodoLista();
-	~NodoLista();
+	NodoLista() {
+
+	}
+	~NodoLista() {
+
+	}
 	virtual const string toString() = 0;
 };
 
-
-
-NodoLista::NodoLista()
-{
-}
-
-
-NodoLista::~NodoLista()
-{
-}

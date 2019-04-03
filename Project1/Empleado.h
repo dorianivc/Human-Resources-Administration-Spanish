@@ -3,7 +3,6 @@
 #include <sstream>
 #include <iostream>
 #include <fstream>
-#include  "Contrato.h"
 using namespace std;
 class Empleado
 {private:
