@@ -8,6 +8,7 @@ private:
 
 public:
 	Planilla(string, Empleado*, Puesto*, bool);
+	virtual const bool esPlanilla();
 	virtual const string toString();
 	~Planilla();
 };

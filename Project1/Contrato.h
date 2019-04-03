@@ -12,8 +12,6 @@ private:
 	string fecha;
 	Empleado* empleado;
 	Puesto* puesto;
-	double salarioBruto;
-	double salarioNeto;//falta de programar en el constructor;
 public:
 	Contrato(string, Empleado*, Puesto*);
 	Empleado* getEmpleado();
@@ -21,7 +19,11 @@ public:
 	Puesto* getPuesto();
 	void setPuesto(Puesto*);
 	string getFecha();
+	virtual const bool esPlanilla() = 0;
 	virtual const string toString();
+	double getSalarioNeto();
+	string verColillaPago();
+
 	~Contrato();
 };
 

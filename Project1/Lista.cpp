@@ -8,17 +8,14 @@ Lista::Lista()
 	actual = NULL;
 }
 
-void Lista::insertarInicio(Nodo * p)
+void Lista::insertar(NodoLista * p)
 {
-	if (primero != NULL) {
-		actual = primero;
-		while (actual->getSiguiente() != NULL) {
-			actual = actual->getSiguiente();
-		}
-		actual->setSiguiente(p);
-	}
-	else
-		primero = p;
+	if (primero == NULL) {
+		primero = new Nodo(p, NULL);
+	} else
+
+		primero = new Nodo(p, primero);
+
 }
 
 int Lista::cuentaNodos()
@@ -39,23 +36,17 @@ bool Lista::listaVacia()
 
 Nodo * Lista::getPosicion(int p)
 {
-	try {
-		if (p <= cuentaNodos() && listaVacia() != false) {
-			actual = primero;
-			if (p == 1) {
-				return actual;
-			}
-			else
-
-				for (int i = 1; i < p; i++) {
-					actual = actual->getSiguiente();
-				}
+	actual = primero;
+	int can = 0;
+	if (listaVacia() == false && p<=cuentaNodos()) {
+	while (actual != NULL)
+	{
+		can++;
+		actual = actual->getSiguiente();
+		if (p == can) {
 			return actual;
 		}
-		else throw "Posicion No Existe";
 	}
-	catch (string p) {
-		cout << p << endl;
 	}
 }
 
@@ -65,8 +56,11 @@ string Lista::toString()
 	if (listaVacia() != true) {
 		stringstream p;
 		actual = primero;
+		int i = 0;
 		while (actual != NULL) {
-			p << actual->toString() << endl;;
+			i++;
+			p << "Nodo # " << i << endl;
+			p << actual->toString() << endl;
 			actual = actual->getSiguiente();
 		}
 		return p.str();

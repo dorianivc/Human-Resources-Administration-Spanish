@@ -8,6 +8,7 @@ class ServiciosProfesionales :
 public:
 	ServiciosProfesionales(string, Empleado*, Puesto*, string);
 	virtual const string toString();
+	virtual const bool esPlanilla();
 	~ServiciosProfesionales();
 };
 

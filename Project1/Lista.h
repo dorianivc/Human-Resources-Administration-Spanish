@@ -10,7 +10,7 @@ class Lista
 	Nodo* actual;
 public:
 	Lista();
-	void insertarInicio(Nodo*);
+	void insertar(NodoLista*);
 	int cuentaNodos();
 	bool listaVacia();
 	Nodo* getPosicion(int);
