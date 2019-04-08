@@ -124,6 +124,11 @@ void Puesto::setAhorroSalEscolar(double p)
 	ahorroSalEscolar = p;
 }
 
+const string Puesto::identificador()
+{
+	return codigo;
+}
+
 Puesto::~Puesto()
 {
 }

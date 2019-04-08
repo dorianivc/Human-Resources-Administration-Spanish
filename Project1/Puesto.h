@@ -31,6 +31,7 @@ public:
 	void setAhorroNavidad(double);
 	double getAhorroSalEscolar();
 	void setAhorroSalEscolar(double);
+	virtual const string identificador();
 	~Puesto();
 };
 

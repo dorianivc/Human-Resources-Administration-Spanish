@@ -15,6 +15,8 @@ public:
 	bool listaVacia();
 	Nodo* getPosicion(int);
 	string toString();
+	bool eliminarIdentificador(string);
+
 	~Lista();
 };
 

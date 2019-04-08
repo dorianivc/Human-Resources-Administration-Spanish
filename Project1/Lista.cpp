@@ -68,7 +68,48 @@ string Lista::toString()
 	else return "Lista Vacia";
 }
 
+bool Lista::eliminarIdentificador(string cod)
+{
+	actual = primero;
+	Nodo* auxBorrar;
+	Nodo* anterior = actual;
+	auxBorrar = actual;
+
+	if (primero != NULL) {
+		
+		while (auxBorrar != NULL && auxBorrar->getInfo()->identificador()!= cod) {
+			anterior = actual;
+			auxBorrar = auxBorrar->getSiguiente();
+		}
+		if (auxBorrar == NULL) {
+			cout << "El elemento no existe" << endl;
+			return false;
+		}
+		else
+			if (anterior == NULL) {
+				actual = actual->getSiguiente();
+				delete auxBorrar;
+				return true;
+			}
+			else
+			{
+				actual->setSiguiente(auxBorrar->getSiguiente());
+				delete auxBorrar;
+				return true;
+			}
+	}
+	else return false;
+}
+
+
 
 Lista::~Lista()
 {
+	actual = primero;
+	while (actual != NULL) {
+		actual = primero;
+		primero = primero->getSiguiente();
+		delete actual;
+		
+	}
 }

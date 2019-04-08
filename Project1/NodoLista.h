@@ -13,6 +13,7 @@ public:
 	~NodoLista() {
 
 	}
+	virtual const string identificador() = 0;
 	virtual const string toString() = 0;
 };
 

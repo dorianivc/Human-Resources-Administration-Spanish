@@ -8,6 +8,7 @@
 #include "Herramientas.h"
 #include "Planilla.h"
 #include "ServiciosProfesionales.h"
+#include "Empresa.h"
 using namespace std;
 
 int main()
@@ -51,14 +52,32 @@ int main()
 	cout <<"NODOS--->"<< newLista->cuentaNodos();
 	cout << newLista->toString() << endl;
 
-	
-
+	Empresa* newEmpresa = new Empresa("HP", "Heredia", "84042758", "08/04/2019");
+	cout << newEmpresa->toString() << endl;
 	cin.get();
-	delete newPuesto2;
+	cout << "Agregando Puestos" << endl;
+	newEmpresa->addPuesto(newPuesto);
+	newEmpresa->addPuesto(newPuesto2);
+	cout << newEmpresa->toString() << endl;
+	cin.get();
+	cout << "Eliminando Puesto" << endl;
+	if (newEmpresa->eliminarPuesto("777")) {
+		cout << "Puesto Eliminado" << endl;
+
+	}
+	else cout << "No eliminado" << endl;
+	cout << newEmpresa->toString() << endl;
+	cin.get();
+	cout << "Agregando Lista de Empleados por referencia" << endl;
+	newEmpresa->setListaEmpleados(newLista);
+	cout << newEmpresa->toString() << endl;
+	cin.get();
+
+	//delete newPuesto2;
 	delete newServ;
 	delete newEmpleado2;
 	delete newEmpleado;
-	delete newPuesto;
+	//delete newPuesto;
 	delete newPlanilla;
 
 	return 0;

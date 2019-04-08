@@ -97,6 +97,11 @@ string Contrato::verColillaPago()
 
 }
 
+const string Contrato::identificador()
+{
+	return empleado->getCedula();
+}
+
 
 
 Contrato::~Contrato()

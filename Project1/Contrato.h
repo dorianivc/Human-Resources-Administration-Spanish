@@ -23,6 +23,7 @@ public:
 	virtual const string toString();
 	double getSalarioNeto();
 	string verColillaPago();
+	virtual const string identificador();
 
 	~Contrato();
 };

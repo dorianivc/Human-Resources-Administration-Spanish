@@ -24,8 +24,8 @@ string cedula;
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>588</x>
-      <y>217</y>
+      <x>567</x>
+      <y>210</y>
       <w>98</w>
       <h>119</h>
     </coordinates>
@@ -70,29 +70,29 @@ double salarioNeto;
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>623</x>
-      <y>329</y>
-      <w>35</w>
-      <h>105</h>
+      <x>616</x>
+      <y>322</y>
+      <w>28</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;130.0;30.0;10.0</additional_attributes>
+    <additional_attributes>20.0;140.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>679</x>
-      <y>287</y>
-      <w>182</w>
-      <h>161</h>
+      <x>658</x>
+      <y>280</y>
+      <w>203</w>
+      <h>168</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>240.0;210.0;10.0;10.0</additional_attributes>
+    <additional_attributes>270.0;220.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>63</x>
+      <x>70</x>
       <y>21</y>
       <w>140</w>
       <h>245</h>
@@ -127,45 +127,45 @@ ListaPuestos* Puestos
     <id>Relation</id>
     <coordinates>
       <x>469</x>
-      <y>252</y>
-      <w>133</w>
-      <h>84</h>
+      <y>245</y>
+      <w>112</w>
+      <h>91</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;100.0;170.0;10.0</additional_attributes>
+    <additional_attributes>10.0;110.0;140.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>196</x>
+      <x>203</x>
       <y>42</y>
-      <w>336</w>
+      <w>329</w>
       <h>49</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;460.0;50.0</additional_attributes>
+    <additional_attributes>10.0;10.0;450.0;50.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>196</x>
+      <x>203</x>
       <y>112</y>
-      <w>406</w>
-      <h>147</h>
+      <w>378</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;560.0;190.0</additional_attributes>
+    <additional_attributes>10.0;10.0;520.0;180.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>574</x>
       <y>133</y>
-      <w>63</w>
-      <h>98</h>
+      <w>42</w>
+      <h>91</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=0..n</panel_attributes>
-    <additional_attributes>10.0;10.0;70.0;120.0</additional_attributes>
+    <additional_attributes>10.0;10.0;40.0;110.0</additional_attributes>
   </element>
 </diagram>
