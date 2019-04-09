@@ -5,17 +5,18 @@
 #include "Lista.h"
 #include "Puesto.h"
 #include "NodoLista.h"
+#include "Fecha.h"
 using namespace std;
 class Empresa
 {
 	string nombre;
 	string direccion;
 	string telefono;
-	string fechaActual;
+	Fecha* fechaActual;
 	Lista* listaEmpleados;
 	Lista* ListaPuestos;
 public:
-	Empresa(string, string, string, string);
+	Empresa(string, string, string, Fecha* );
 	Empresa(Empresa&);
 	void addPuesto(string, string, string, double);
 	void addPuesto(Puesto*);
@@ -25,7 +26,8 @@ public:
 	void setDireccion(string);
 	string getTelefono();
 	void setTelefono(string);
-	string getFechaActual();
+	Fecha* getFechaActual();
+	string fechaToString();
 	Lista* getListaEmpleados();
 	void setListaEmpleados(Lista*);
 	Lista* getListaPuestos();

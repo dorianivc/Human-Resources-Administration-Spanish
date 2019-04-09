@@ -11,6 +11,7 @@ class Herramientas
 public:
 	static string obtenerFecha();
 	static int convertirInt(string);
+	
 
 };
 

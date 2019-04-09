@@ -4,9 +4,9 @@ using namespace std;
 class ServiciosProfesionales :
 	public Contrato
 {private:
-	string fechaCesantia;
+	Fecha* fechaCesantia;
 public:
-	ServiciosProfesionales(string, Empleado*, Puesto*, string);
+	ServiciosProfesionales(Fecha*, Empleado*, Puesto*, Fecha*);
 	virtual const string toString();
 	virtual const bool esPlanilla();
 	~ServiciosProfesionales();

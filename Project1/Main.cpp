@@ -9,7 +9,9 @@
 #include "Planilla.h"
 #include "ServiciosProfesionales.h"
 #include "Empresa.h"
+#include "Fecha.h"
 using namespace std;
+
 
 int main()
 {
@@ -24,7 +26,7 @@ int main()
 	
 
 
-	double b = 800000;
+	double b = 1800000;
 	Puesto* newPuesto = new Puesto("Ingeniero en Sistemas", "777", "Encargado en Calidad de Sistemas", b);
 	
 	double b2 = 1400000;
@@ -33,26 +35,23 @@ int main()
 	
 	Empleado* newEmpleado2 = new Empleado("602580939", "Calderon", "Monica", "18/11/2011", "84298549", "Quepos, Puntarenas");
 
-	Planilla* newPlanilla = new Planilla("07/10/2018", newEmpleado, newPuesto, false);
-	newPlanilla->getPuesto()->setAhorroNavidad(150000.00);
-	newPlanilla->getPuesto()->setAhorroSalEscolar(25000.00);
-	newPlanilla->getPuesto()->addSalario(50000);
+	Planilla* newPlanilla = new Planilla(new Fecha(07,10,2018), newEmpleado, newPuesto, false);
+	newPlanilla->setPorcentajeAhorroEscolar(10);
+	newPlanilla->addAhorroEscolar();
 	cout << newPlanilla->toString() << endl;
-	cout << newPlanilla->verColillaPago() << endl;
+	cout << newPlanilla->imprimirColillaDePago(new Fecha(07,10,1999), 0) << endl;
 	
-	ServiciosProfesionales* newServ = new ServiciosProfesionales("04/03/2019", newEmpleado2, newPuesto2, "09/05/2017");
-	cout << newServ->verColillaPago() << endl;
+	/*ServiciosProfesionales* newServ = new ServiciosProfesionales("04/03/2019", newEmpleado2, newPuesto2, "09/05/2017");
+	cout << newServ->verColillaPago() << endl;*/
 	Lista* newLista = new Lista();
 	for (int i = 0; i < 5; i++) {
 		newLista->insertar(newPlanilla);
-		newLista->insertar(newServ);
+		
 		
 	}
 
-	cout <<"NODOS--->"<< newLista->cuentaNodos();
-	cout << newLista->toString() << endl;
 
-	Empresa* newEmpresa = new Empresa("HP", "Heredia", "84042758", "08/04/2019");
+	Empresa* newEmpresa = new Empresa("HP", "Heredia", "84042758", new Fecha(07,07,2007));
 	cout << newEmpresa->toString() << endl;
 	cin.get();
 	cout << "Agregando Puestos" << endl;
@@ -73,8 +72,9 @@ int main()
 	cout << newEmpresa->toString() << endl;
 	cin.get();
 
+
 	//delete newPuesto2;
-	delete newServ;
+	//delete newServ;
 	delete newEmpleado2;
 	delete newEmpleado;
 	//delete newPuesto;

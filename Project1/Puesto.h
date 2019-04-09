@@ -9,9 +9,6 @@ private:
 	string codigo;
 	string descripcion;
 	double salarioBase;
-	double salarioBruto;
-	double ahorroNavidad;
-	double ahorroSalEscolar;
 public:
 	Puesto(string, string, string, double);
 	string getNombre();
@@ -24,14 +21,9 @@ public:
 	void setSalarioBase(double);
 	virtual const string toString();
 	double getDeducciones(double p);
-	double getSalarioBruto();
-	void addSalario(double);
-	double getSalarioNeto();
-	double getAhorroNavidad();
-	void setAhorroNavidad(double);
-	double getAhorroSalEscolar();
-	void setAhorroSalEscolar(double);
 	virtual const string identificador();
+	double getSalarioDiario();
+	
 	~Puesto();
 };
 

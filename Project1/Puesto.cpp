@@ -8,9 +8,6 @@ Puesto::Puesto(string nom, string cod, string desc, double newSalarioBase)
 	codigo = cod;
 	descripcion = desc;
 	salarioBase = newSalarioBase;
-	salarioBruto = salarioBase;
-	ahorroNavidad = 0;
-	ahorroSalEscolar = 0;
 
 }
 
@@ -73,7 +70,7 @@ double Puesto::getDeducciones(double p)
 		ahorro = (total*0.02);
 		diferenciaRenta = (total - limite);
 		renta = (diferenciaRenta*0.20);
-		deduccion = (cargaSocial + ahorro + renta + ahorroNavidad + ahorroSalEscolar);
+		deduccion = (cargaSocial + ahorro + renta );
 		return deduccion;
 	}
 	else
@@ -81,52 +78,21 @@ double Puesto::getDeducciones(double p)
 		double total = p, cargaSocial, ahorro, deduccion = 0;
 		cargaSocial = (total*0.09);//Cargas Sociales
 		ahorro = (total*0.02);
-		deduccion = cargaSocial + ahorro+ ahorroNavidad + ahorroSalEscolar;
+		deduccion = cargaSocial + ahorro;
 		return deduccion;
 	}
 }
 
-double Puesto::getSalarioBruto()
-{
-	return salarioBruto;
-}
 
-void Puesto::addSalario(double p)
-{
-	salarioBruto = salarioBruto + p;
-}
-
-double Puesto::getSalarioNeto()
-{
-	double salarioNetop = 0;
-	salarioNetop = salarioBruto - getDeducciones(salarioBruto);
-	return salarioNetop;
-
-}
-
-double Puesto::getAhorroNavidad()
-{
-	return ahorroNavidad;
-}
-
-void Puesto::setAhorroNavidad(double newAhorro)
-{
-	ahorroNavidad = newAhorro;
-}
-
-double Puesto::getAhorroSalEscolar()
-{
-	return ahorroSalEscolar;
-}
-
-void Puesto::setAhorroSalEscolar(double p)
-{
-	ahorroSalEscolar = p;
-}
 
 const string Puesto::identificador()
 {
 	return codigo;
+}
+
+double Puesto::getSalarioDiario()
+{
+	return (salarioBase/30);
 }
 
 Puesto::~Puesto()

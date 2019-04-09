@@ -5,23 +5,24 @@
 #include <string>
 #include <sstream>
 #include <iostream>
+#include "Fecha.h"
 using namespace std;
 class Contrato :public NodoLista
 {
 private:
-	string fecha;
+	Fecha* fecha;
 	Empleado* empleado;
 	Puesto* puesto;
 public:
-	Contrato(string, Empleado*, Puesto*);
+	Contrato(Empleado*, Puesto*, Fecha*);
 	Empleado* getEmpleado();
 	void setEmpleado(Empleado*);
 	Puesto* getPuesto();
 	void setPuesto(Puesto*);
-	string getFecha();
+	string getFechaToString();
+	Fecha* getFecha();
 	virtual const bool esPlanilla() = 0;
 	virtual const string toString();
-	double getSalarioNeto();
 	string verColillaPago();
 	virtual const string identificador();
 

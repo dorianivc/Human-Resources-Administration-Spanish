@@ -119,6 +119,7 @@
     <ClCompile Include="Contrato.cpp" />
     <ClCompile Include="Empleado.cpp" />
     <ClCompile Include="Empresa.cpp" />
+    <ClCompile Include="Fecha.cpp" />
     <ClCompile Include="Herramientas.cpp" />
     <ClCompile Include="Lista.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -132,6 +133,7 @@
     <ClInclude Include="Contrato.h" />
     <ClInclude Include="Empleado.h" />
     <ClInclude Include="Empresa.h" />
+    <ClInclude Include="Fecha.h" />
     <ClInclude Include="Herramientas.h" />
     <ClInclude Include="Lista.h" />
     <ClInclude Include="Nodo.h" />

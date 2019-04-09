@@ -3,12 +3,12 @@
 
 
 
-Empresa::Empresa(string nombre, string direccion, string telefono , string FechaActual)
+Empresa::Empresa(string nombre, string direccion, string telefono , Fecha* pfecha)
 {
 	this->nombre = nombre;
 	this->direccion = direccion;
 	this->telefono = telefono;
-	this->fechaActual = FechaActual;
+	this->fechaActual = pfecha;
 	listaEmpleados = new Lista();
 	ListaPuestos = new Lista();
 }
@@ -63,9 +63,14 @@ void Empresa::setTelefono(string newTelefono)
 	telefono = newTelefono;
 }
 
-string Empresa::getFechaActual()
+Fecha* Empresa::getFechaActual()
 {
 	return fechaActual;
+}
+
+string Empresa::fechaToString()
+{
+	return fechaActual->toStringFecha();
 }
 
 Lista * Empresa::getListaEmpleados()
@@ -104,7 +109,7 @@ string Empresa::toString()
 	p << "Empresa: " << nombre << endl;
 	p << "Direccion: " << direccion << endl;
 	p << "Telefono: " << telefono << endl;
-	p << "Fecha Actual" << fechaActual << endl;
+	p << "Fecha Actual: " << fechaActual->toStringFecha() << endl;
 	p << "------------------------------" << endl;
 	p << "Puestos: " << endl;
 	p << ListaPuestos->toString() << endl;
