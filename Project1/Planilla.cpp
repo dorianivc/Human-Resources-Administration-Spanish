@@ -61,9 +61,9 @@ void Planilla::addAhorroEscolar()
 	ahorroEscolar = ahorroEscolar + (double)(getSalarioBruto()*porcentajeAhorroEscol / 100);
 }
 
-double Planilla::calculcarAguinaldo()
+double Planilla::calculcarAguinaldo(Fecha* aCalcular)
 {//CORREGIR;
-	unsigned dias = getFecha()->Distancia(getFecha(), ultimoPagoAguinaldo);
+	unsigned dias = getFecha()->Distancia(ultimoPagoAguinaldo, aCalcular);
 	double aux = getPuesto()->getSalarioBase() / 360;
 	double aguinaldo = (double)dias*  aux;
 	return aguinaldo;
@@ -132,6 +132,7 @@ string Planilla::imprimirColillaDePago(Fecha * fechaPago, double p1)
 	p << "Ahorros:" << endl;
 	p << "Ahorro Navidad: " << ahorroNavidad << endl;
 	p << "Ahorro Escolar: " << ahorroEscolar << endl;
+	p << "aguinaldo::::" << (long)calculcarAguinaldo(fechaPago) << endl;
 	p << "-----------FIN-----------" << endl;
 	return p.str();
 
@@ -176,7 +177,7 @@ const string Planilla::toString()
 		p << "Tipo de Empleado: " << "EMPLEADO EN PROPIEDAD" << endl;
 	}
 	p << getPuesto()->toString() << endl;
-	p << "aguinaldo::::" << calculcarAguinaldo() << endl;
+
 	return p.str();
 }
 

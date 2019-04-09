@@ -39,7 +39,7 @@ int main()
 	newPlanilla->setPorcentajeAhorroEscolar(10);
 	newPlanilla->addAhorroEscolar();
 	cout << newPlanilla->toString() << endl;
-	cout << newPlanilla->imprimirColillaDePago(new Fecha(07,10,1999), 0) << endl;
+	cout << newPlanilla->imprimirColillaDePago(new Fecha(07,10,2019), 0) << endl;
 	
 	/*ServiciosProfesionales* newServ = new ServiciosProfesionales("04/03/2019", newEmpleado2, newPuesto2, "09/05/2017");
 	cout << newServ->verColillaPago() << endl;*/

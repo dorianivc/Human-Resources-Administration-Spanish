@@ -24,7 +24,7 @@ public:
 	void setPorcentajeAhorroNavidad(int);
 	void addAhorroNavidad();
 	void addAhorroEscolar();
-	double calculcarAguinaldo();
+	double calculcarAguinaldo(Fecha*);
 	void setFechaUltimaVacaciones(Fecha*);//
 	void setUltimoPagoAguinaldo(Fecha*);//
 	double getDeducciones(double p); //Le paso el salario Bruto
