@@ -11,6 +11,14 @@ Puesto::Puesto(string nom, string cod, string desc, double newSalarioBase)
 
 }
 
+Puesto::Puesto( Puesto &p)
+{
+	nombre = p.getNombre();
+	codigo = p.getCodigo();
+	descripcion = p.getDescripcion();
+	salarioBase = p.getSalarioBase();
+}
+
 string Puesto::getNombre()
 {
 	return nombre;

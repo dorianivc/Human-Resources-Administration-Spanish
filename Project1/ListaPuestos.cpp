@@ -1,24 +1,19 @@
-#include "Lista.h"
+#include "ListaPuestos.h"
 
 
 
-Lista::Lista()
+ListaPuestos::ListaPuestos()
 {
 	primero = NULL;
 	actual = NULL;
 }
 
-void Lista::insertar(NodoLista * p)
+void ListaPuestos::insertar(Puesto * newPuesto)
 {
-	if (primero == NULL) {
-		primero = new Nodo(p, NULL);
-	} else
-
-		primero = new Nodo(p, primero);
-
+	primero = new NodoPuesto(newPuesto, primero);
 }
 
-int Lista::cuentaNodos()
+int ListaPuestos::cuentaNodos()
 {
 	actual = primero;
 	int can = 0;
@@ -29,30 +24,33 @@ int Lista::cuentaNodos()
 	}
 	return can;
 }
-bool Lista::listaVacia()
+
+bool ListaPuestos::listaVacia()
 {
 	return  (primero == NULL) ? true : false;
 }
 
-Nodo * Lista::getPosicion(int p)
+NodoPuesto * ListaPuestos::getPosicion(int p)
 {
 	actual = primero;
 	int can = 0;
-	if (listaVacia() == false && p<=cuentaNodos()) {
-	while (actual != NULL)
-	{
-		can++;
-		actual = actual->getSiguiente();
-		if (p == can) {
-			return actual;
+	if (listaVacia() == false && p <= cuentaNodos()) {
+		while (actual != NULL)
+		{
+			can++;
+			actual = actual->getSiguiente();
+			if (p == can) {
+				return actual;
+			}
 		}
 	}
+	else {
+		return NULL;
 	}
 }
 
-string Lista::toString()
+string ListaPuestos::toString()
 {
-	
 	if (listaVacia() != true) {
 		stringstream p;
 		actual = primero;
@@ -68,16 +66,16 @@ string Lista::toString()
 	else return "Lista Vacia";
 }
 
-bool Lista::eliminarIdentificador(string cod)
+bool ListaPuestos::eliminarIdentificador(string cod)
 {
 	actual = primero;
-	Nodo* auxBorrar;
-	Nodo* anterior = actual;
+	NodoPuesto* auxBorrar;
+	NodoPuesto* anterior = actual;
 	auxBorrar = actual;
 
 	if (primero != NULL) {
-		
-		while (auxBorrar != NULL && auxBorrar->getInfo()->identificador()!= cod) {
+
+		while (auxBorrar != NULL && auxBorrar->getInfo()->getCodigo() != cod) {
 			anterior = actual;
 			auxBorrar = auxBorrar->getSiguiente();
 		}
@@ -102,14 +100,13 @@ bool Lista::eliminarIdentificador(string cod)
 }
 
 
-
-Lista::~Lista()
+ListaPuestos::~ListaPuestos()
 {
 	actual = primero;
 	while (actual != NULL) {
 		actual = primero;
 		primero = primero->getSiguiente();
 		delete actual;
-		
+
 	}
 }

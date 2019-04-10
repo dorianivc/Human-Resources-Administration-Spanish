@@ -7,7 +7,7 @@
 #include <iostream>
 #include "Fecha.h"
 using namespace std;
-class Contrato :public NodoLista
+class Contrato 
 {
 private:
 	Fecha* fecha;
@@ -21,8 +21,11 @@ public:
 	void setPuesto(Puesto*);
 	string getFechaToString();
 	Fecha* getFecha();
+	virtual const bool pagarAhorro() = 0;
 	virtual const bool esPlanilla() = 0;
 	virtual const string toString();
+	virtual const void pagarAguinaldo(Fecha*) = 0;
+	virtual const void otorgarVacaciones(Fecha*) = 0;
 	string verColillaPago();
 	virtual const string identificador();
 

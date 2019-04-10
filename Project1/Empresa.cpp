@@ -3,14 +3,24 @@
 
 
 
+ListaPuestos * Empresa::getListaPuestos()
+{
+	return puestos;
+}
+
+void Empresa::setListaPuesto(ListaPuestos *p)
+{
+	puestos = p;
+}
+
 Empresa::Empresa(string nombre, string direccion, string telefono , Fecha* pfecha)
 {
 	this->nombre = nombre;
 	this->direccion = direccion;
 	this->telefono = telefono;
 	this->fechaActual = pfecha;
-	listaEmpleados = new Lista();
-	ListaPuestos = new Lista();
+	listaEmpleados = new ListaContratos();
+	puestos = new ListaPuestos();
 }
 
 Empresa::Empresa(Empresa & p)
@@ -20,22 +30,50 @@ Empresa::Empresa(Empresa & p)
 	telefono = p.getTelefono();
 	fechaActual = p.getFechaActual();
 	listaEmpleados = p.getListaEmpleados();
-	ListaPuestos = p.getListaPuestos();
+	puestos = p.getListaPuestos();
+}
+
+void Empresa::viajarAdelanteEnELTiempo(Fecha * fechaFutura)
+{
+	int DiasAViajar = fechaActual->Distancia(fechaActual, fechaFutura);
+	int mesesAViajar = 0;
+	if(DiasAViajar>0){
+		fechaActual = fechaFutura;
+
+		if (DiasAViajar > 29) {
+			mesesAViajar = (DiasAViajar / 30);
+			if (listaEmpleados->listaVacia() != true) {
+				listaEmpleados->actualizarAhorros(mesesAViajar);
+			}
+		}
+	}
 }
 
 void Empresa::addPuesto(string nombre, string codigo, string descripcion, double salarioBase)
 {
-	ListaPuestos->insertar(new Puesto(nombre, codigo, descripcion, salarioBase));
+	puestos->insertar(new Puesto(nombre, codigo, descripcion, salarioBase));
+}
+
+void Empresa::pagarAguinaldo()
+{
+	if (listaEmpleados->listaVacia() == false) {
+		listaEmpleados->pagarAguinaldos(fechaActual);
+	}
 }
 
 void Empresa::addPuesto(Puesto * newPuesto)
 {
-	ListaPuestos->insertar(newPuesto);
+	puestos->insertar(newPuesto);
+}
+
+void Empresa::addContrato(Contrato * p)
+{
+	listaEmpleados->insertar(p);
 }
 
 bool Empresa::eliminarPuesto(string cod)
 {
-	return(ListaPuestos->eliminarIdentificador(cod));
+	return(puestos->eliminarIdentificador(cod));
 }
 
 string Empresa::getNombre()
@@ -73,25 +111,17 @@ string Empresa::fechaToString()
 	return fechaActual->toStringFecha();
 }
 
-Lista * Empresa::getListaEmpleados()
+ListaContratos * Empresa::getListaEmpleados()
 {
 	return listaEmpleados;
 }
 
-void Empresa::setListaEmpleados(Lista * newListaEmpleados)
+void Empresa::setListaEmpleados(ListaContratos * newListaEmpleados)
 {
 	listaEmpleados = newListaEmpleados;
 }
 
-Lista * Empresa::getListaPuestos()
-{
-	return ListaPuestos;
-}
 
-void Empresa::setListaPuestos(Lista * newListaPuestos)
-{
-	ListaPuestos = newListaPuestos;
-}
 
 void Empresa::operator=(Empresa & p)
 {
@@ -100,7 +130,7 @@ void Empresa::operator=(Empresa & p)
 	telefono = p.getTelefono();
 	fechaActual = p.getFechaActual();
 	listaEmpleados = p.getListaEmpleados();
-	ListaPuestos = p.getListaPuestos();
+	puestos = p.getListaPuestos();
 }
 
 string Empresa::toString()
@@ -112,7 +142,7 @@ string Empresa::toString()
 	p << "Fecha Actual: " << fechaActual->toStringFecha() << endl;
 	p << "------------------------------" << endl;
 	p << "Puestos: " << endl;
-	p << ListaPuestos->toString() << endl;
+	p << puestos->toString() << endl;
 	p << "------------------------------" << endl;
 	p << "Lista de Empleados: " << "              " << "Total: " << listaEmpleados->cuentaNodos() << endl;
 	p << listaEmpleados->toString() << endl;
@@ -123,5 +153,5 @@ string Empresa::toString()
 Empresa::~Empresa()
 {
 	delete listaEmpleados;
-	delete ListaPuestos;
+	delete puestos;
 }

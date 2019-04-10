@@ -41,6 +41,8 @@ Fecha * Contrato::getFecha()
 	return fecha;
 }
 
+
+
 const string Contrato::toString()
 {
 	stringstream p;

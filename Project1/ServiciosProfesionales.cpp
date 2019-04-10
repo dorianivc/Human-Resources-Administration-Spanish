@@ -24,6 +24,11 @@ const bool ServiciosProfesionales::esPlanilla()
 	return false;
 }
 
+const bool ServiciosProfesionales::pagarAhorro()
+{
+	return false;
+}
+
 
 
 ServiciosProfesionales::~ServiciosProfesionales()

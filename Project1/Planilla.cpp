@@ -8,18 +8,17 @@ Planilla::Planilla(Fecha* fechaIncio, Empleado* newEmpleado, Puesto* newPuesto,b
 	ahorroEscolar = 0;
 	ahorroNavidad = 0;
 	activo = true;
-	aguinaldo = 0;
+	
 	fechaUltimasVacaciones = new Fecha (getFecha());
 	ultimoPagoAguinaldo = new Fecha	(getFecha());
-	diasvacacionesAcumuladas = 0;
 	porcentajeAhorroEscol = 0;
 	porcentajeAhorroNav = 0;
 
 }
 
-int Planilla::vacacionesAcumuladas()
+int Planilla::vacacionesAcumuladas(Fecha*p)
 {
-	unsigned dias = getFecha()->Distancia(getFecha(), fechaUltimasVacaciones);
+	unsigned dias = getFecha()->Distancia(getFecha(), p);
 	//Calculo de Vacaciones
 	if (dias < 24) {
 		return 0;
@@ -41,6 +40,22 @@ int Planilla::getPorcentajeAhorroEscolar()
 	return this->porcentajeAhorroEscol;
 }
 
+const void Planilla::pagarAguinaldo(Fecha *p)
+{
+	ultimoPagoAguinaldo = p;
+}
+
+const void Planilla:: otorgarVacaciones(Fecha * p)
+{
+	if (vacacionesAcumuladas(p) > 0) {
+		cout << "Otorgando "<< vacacionesAcumuladas(p) << " Dias de Vacaciones" << endl;
+		fechaUltimasVacaciones = p;
+	}
+	else {
+		cout << "No posee dias de vacaciones" << endl;
+	}
+}
+
 void Planilla::setPorcentajeAhorroEscolar(int newPorcentaje)
 {
 	porcentajeAhorroEscol = newPorcentaje;
@@ -59,6 +74,14 @@ void Planilla::addAhorroNavidad()
 void Planilla::addAhorroEscolar()
 {
 	ahorroEscolar = ahorroEscolar + (double)(getSalarioBruto()*porcentajeAhorroEscol / 100);
+}
+
+
+const bool Planilla::pagarAhorro()
+{
+	addAhorroEscolar();
+	addAhorroNavidad();
+	return true;
 }
 
 double Planilla::calculcarAguinaldo(Fecha* aCalcular)
@@ -133,6 +156,7 @@ string Planilla::imprimirColillaDePago(Fecha * fechaPago, double p1)
 	p << "Ahorro Navidad: " << ahorroNavidad << endl;
 	p << "Ahorro Escolar: " << ahorroEscolar << endl;
 	p << "aguinaldo::::" << (long)calculcarAguinaldo(fechaPago) << endl;
+	p << "Dias de Vacaciones::: " << vacacionesAcumuladas(fechaPago) << endl;
 	p << "-----------FIN-----------" << endl;
 	return p.str();
 

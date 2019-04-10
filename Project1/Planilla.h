@@ -11,19 +11,21 @@ private:
 	Fecha* ultimoPagoAguinaldo;
 	double ahorroNavidad;
 	double ahorroEscolar;
-	double aguinaldo;
 	int porcentajeAhorroNav;
 	int porcentajeAhorroEscol;
-	int diasvacacionesAcumuladas;
+	
 public:
 	Planilla(Fecha*, Empleado*, Puesto*, bool);
-	int vacacionesAcumuladas();
+	int vacacionesAcumuladas(Fecha*);
 	int getPorcentajeAhorroNavidad();
 	int getPorcentajeAhorroEscolar();
+	virtual const void pagarAguinaldo(Fecha*);
+	virtual const void otorgarVacaciones(Fecha*);
 	void setPorcentajeAhorroEscolar(int);
 	void setPorcentajeAhorroNavidad(int);
 	void addAhorroNavidad();
 	void addAhorroEscolar();
+	virtual const bool pagarAhorro();
 	double calculcarAguinaldo(Fecha*);
 	void setFechaUltimaVacaciones(Fecha*);//
 	void setUltimoPagoAguinaldo(Fecha*);//

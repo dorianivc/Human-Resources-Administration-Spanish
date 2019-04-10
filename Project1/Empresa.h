@@ -2,24 +2,29 @@
 #include <string>
 #include <sstream>
 #include <iostream>
-#include "Lista.h"
-#include "Puesto.h"
-#include "NodoLista.h"
-#include "Fecha.h"
+#include "ListaContrato.h"
+#include "ListaPuestos.h"
 using namespace std;
 class Empresa
 {
+	
 	string nombre;
 	string direccion;
 	string telefono;
 	Fecha* fechaActual;
-	Lista* listaEmpleados;
-	Lista* ListaPuestos;
+	ListaContratos* listaEmpleados;
+	ListaPuestos* puestos;
+	
 public:
+	ListaPuestos* getListaPuestos();
+	void setListaPuesto(ListaPuestos*);
 	Empresa(string, string, string, Fecha* );
 	Empresa(Empresa&);
+	void viajarAdelanteEnELTiempo(Fecha*);
 	void addPuesto(string, string, string, double);
+	void pagarAguinaldo();
 	void addPuesto(Puesto*);
+	void addContrato(Contrato*);
 	bool eliminarPuesto(string);
 	string getNombre();
 	string getDireccion();
@@ -28,10 +33,8 @@ public:
 	void setTelefono(string);
 	Fecha* getFechaActual();
 	string fechaToString();
-	Lista* getListaEmpleados();
-	void setListaEmpleados(Lista*);
-	Lista* getListaPuestos();
-	void setListaPuestos(Lista*);
+	ListaContratos* getListaEmpleados();
+	void setListaEmpleados(ListaContratos*);
 	void operator =(Empresa&);
 	string toString();
 

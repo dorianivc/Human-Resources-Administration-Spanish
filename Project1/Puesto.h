@@ -1,8 +1,10 @@
 #pragma once
-#include "NodoLista.h"
+#include <sstream>
+#include<iostream>
+#include<string>
+
 using namespace std;
-class Puesto :
-	public NodoLista
+class Puesto
 {
 private:
 	string nombre;
@@ -11,6 +13,7 @@ private:
 	double salarioBase;
 public:
 	Puesto(string, string, string, double);
+	Puesto( Puesto&);
 	string getNombre();
 	void setNombre(string);
 	string getCodigo();
