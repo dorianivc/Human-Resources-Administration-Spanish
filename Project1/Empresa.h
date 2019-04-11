@@ -25,6 +25,7 @@ public:
 	void addPuesto(string, string, string, double);
 	void pagarAguinaldo();
 	void addPuesto(Puesto*);
+	void setFecha(Fecha*);
 	void addContrato(Contrato*);
 	bool eliminarPuesto(string);
 	string getNombre();

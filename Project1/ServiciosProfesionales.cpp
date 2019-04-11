@@ -13,7 +13,7 @@ const string ServiciosProfesionales::toString()
 	stringstream p;
 	p <<"CONTRATO POR SERVICIOS PROFESIONALES" << endl;
 	p << "Fecha de Inicio Contrato: " << getFechaToString() << endl;
-	p << "Fecha de Cesantia: " << fechaCesantia << endl;
+	p << "Fecha de Cesantia: " << fechaCesantia->toStringFecha() << endl;
 	p << getEmpleado()->toString();
 	p << getPuesto()->toString() << endl;
 	p << "Empleado activo: "; if (activo) {
@@ -80,6 +80,7 @@ const void ServiciosProfesionales::viajarEnElTiempo(Fecha * fechaAViajar)
 	int dias = getFecha()->Distancia(getFecha(), fechaAViajar);
 	if (dias >= getFecha()->Distancia(getFecha(), fechaCesantia)) {
 		cout << cesarEmpleado(fechaAViajar) << endl;
+		system("pause");
 	}
 }
 
@@ -96,7 +97,7 @@ const string ServiciosProfesionales::cesarEmpleado(Fecha * fechaACesar)
 	fechaCesantia = fechaACesar;
 	activo = false;
 	p << "Total a Cancelar por la empresa: " << (long)suma << endl;
-	
+	activo = false;
 	
 	return p.str();
 }

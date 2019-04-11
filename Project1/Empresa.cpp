@@ -38,7 +38,6 @@ void Empresa::viajarAdelanteEnELTiempo(Fecha * fechaFutura)
 	int DiasAViajar = fechaActual->Distancia(fechaActual, fechaFutura);
 	int mesesAViajar = 0;
 	if(DiasAViajar>0){
-		fechaActual = fechaFutura;
 
 		if (DiasAViajar > 29) {
 			mesesAViajar = (DiasAViajar / 30);
@@ -64,6 +63,11 @@ void Empresa::pagarAguinaldo()
 void Empresa::addPuesto(Puesto * newPuesto)
 {
 	puestos->insertar(newPuesto);
+}
+
+void Empresa::setFecha(Fecha * newFecha)
+{
+	fechaActual = newFecha;
 }
 
 void Empresa::addContrato(Contrato * p)
@@ -142,10 +146,14 @@ string Empresa::toString()
 	p << "Fecha Actual: " << fechaActual->toStringFecha() << endl;
 	p << "------------------------------" << endl;
 	p << "Puestos: " << endl;
-	p << puestos->toString() << endl;
+	if (puestos != NULL) {
+		p << puestos->toString() << endl;
+	}
 	p << "------------------------------" << endl;
 	p << "Lista de Empleados: " << "              " << "Total: " << listaEmpleados->cuentaNodos() << endl;
-	p << listaEmpleados->toString() << endl;
+	if (listaEmpleados != NULL) {
+		p << listaEmpleados->toString() << endl;
+	}
 	p << "       ---Fin---     " << endl;
 	return p.str();
 }

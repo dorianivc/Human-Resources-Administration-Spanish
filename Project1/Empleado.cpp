@@ -2,7 +2,7 @@
 
 
 
-Empleado::Empleado(string ced, string nom, string apell, string fNac, string dir, string numTel)
+Empleado::Empleado(int ced, string nom, string apell, string fNac, string dir, string numTel)
 {
 	this->cedula = ced;
 	this->nombre=nom;
@@ -23,12 +23,12 @@ void Empleado::setNombre(string newNombre)
 	nombre = newNombre;
 }
 
-string Empleado::getCedula()
+int Empleado::getCedula()
 {
 	return cedula;
 }
 
-void Empleado::setCedula(string newCedula)
+void Empleado::setCedula(int newCedula)
 {
 	cedula = newCedula;
 }

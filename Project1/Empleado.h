@@ -6,18 +6,18 @@
 using namespace std;
 class Empleado
 {private:
-	string cedula;
+	int cedula;
 	string nombre;
 	string apellidos;
 	string fechaNacimiento;
 	string direccion;
 	string numeroTelefono;
 public:
-	Empleado(string, string, string, string,string, string);
+	Empleado(int, string, string, string,string, string);
 	string getNombre();
 	void setNombre(string);
-	string getCedula();
-	void setCedula(string);
+	int getCedula();
+	void setCedula(int);
 	string getApellidos();
 	void setApellidos(string);
 	string getFechaNacimiento();

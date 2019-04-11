@@ -239,3 +239,58 @@ Dias de Vacaciones::: 0
 -----------FIN-----------
 
 
+Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 6456 Nombre : Dr 
+Codigo de Puesto: 45-->Labrador
+Salario Bruto--> 345000
+Deducciones: 
+Carga Social (9%) ---> -31050
+Ahorro Obligatorio (2%) ---> -31050
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -37950
+Salario Neto: 307050
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+aguinaldo::::0
+Dias de Vacaciones::: 0
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 604560224 Nombre : Jorge RT
+Codigo de Puesto: 45-->Labrador
+Salario Bruto--> 345000
+Deducciones: 
+Carga Social (9%) ---> -31050
+Ahorro Obligatorio (2%) ---> -31050
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 51750 Porcentaje de ahorro ----> 15
+Total de Deducciones: -5212950
+Salario Neto: -4867950
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+aguinaldo::::0
+Dias de Vacaciones::: 0
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 604560223 Nombre : Dorian ROBERTO
+Codigo de Puesto: 45-->Labrador
+Salario Bruto--> 345000
+Deducciones: 
+Carga Social (9%) ---> -31050
+Ahorro Obligatorio (2%) ---> -31050
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 34500 Porcentaje de ahorro ----> 10
+Total de Deducciones: -3487950
+Salario Neto: -3142950
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+aguinaldo::::0
+Dias de Vacaciones::: 0
+-----------FIN-----------
+
+

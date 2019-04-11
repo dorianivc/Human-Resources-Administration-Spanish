@@ -95,7 +95,9 @@ string Contrato::verColillaPago()
 
 const string Contrato::identificador()
 {
-	return empleado->getCedula();
+	int p = empleado->getCedula();
+	string chorizo = " " + p;
+	return chorizo;
 }
 
 

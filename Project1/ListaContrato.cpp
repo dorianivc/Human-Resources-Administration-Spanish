@@ -58,7 +58,7 @@ void ListaContratos::actualizarAhorros(int veces)
 	}
 }
 
-Contrato * ListaContratos::getPosicion(string p)
+Contrato * ListaContratos::getPosicion(int p)
 {
 	
 	if (primero != NULL) {
@@ -67,16 +67,14 @@ Contrato * ListaContratos::getPosicion(string p)
 			if (actual->getInfo()->getEmpleado()->getCedula() == p) {
 				return actual->getInfo();
 			}
-			else
+			else {
 				actual = actual->getSiguiente();
-		}
+			}
+		} 
+		cout << "algo pasa" << endl;
 		return NULL;
 	}
-	else {
-		cout << "Lista Vacia" << endl;
-		cout << "Se retornara NULL" << endl;
-		return NULL;
-	}
+	else return NULL;
 	
 }
 
@@ -119,7 +117,7 @@ string ListaContratos::pagarSalarios(Fecha* fechaActual)
 	return p.str();
 }
 
-string ListaContratos::otorgarVacaciones(Fecha * fechita, string ced)
+string ListaContratos::otorgarVacaciones(Fecha * fechita, int ced)
 {
 	stringstream p;
 	if (primero != NULL) {

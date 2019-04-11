@@ -16,10 +16,10 @@ public:
 	int cuentaNodos();
 	bool listaVacia();
 	void actualizarAhorros(int);
-	Contrato* getPosicion(string);
+	Contrato* getPosicion(int);
 	string toString();
 	string pagarSalarios(Fecha*);
-	string otorgarVacaciones(Fecha*, string);
+	string otorgarVacaciones(Fecha*, int);
 	bool eliminarIdentificador(string);
 	string pagarAguinaldos(Fecha*);
 

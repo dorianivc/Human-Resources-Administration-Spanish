@@ -57,7 +57,7 @@ const string Planilla:: otorgarVacaciones(Fecha * p)
 {
 	stringstream k;
 	if (vacacionesAcumuladas(p) > 0) {
-		k << "Otorgando "<< vacacionesAcumuladas(p) << " Dias de Vacaciones" << " correspondiente al empleado" << getEmpleado()->getNombre() << " " << getEmpleado()->getApellidos() << " Cedula: " << getEmpleado()->getCedula() << endl;
+		k << "Otorgando "<< vacacionesAcumuladas(p) << " Dias de Vacaciones" << " correspondiente al empleado " << getEmpleado()->getNombre() << " " << getEmpleado()->getApellidos() << " Cedula: " << getEmpleado()->getCedula() << endl;
 		fechaUltimasVacaciones = p;
 	}
 	else {
@@ -247,7 +247,7 @@ const string Planilla::cesarEmpleado(Fecha * fechaACesar)
 	p << "Dias de vacaciones acumuladas a pagar : " << vacacionesAcumuladas(fechaACesar) << endl;
 	p << "Monto a cancelar por vacaciones: " << (long)((vacacionesAcumuladas(fechaACesar))*getPuesto()->getSalarioDiario()) << endl;
 	p << "Dias a pagar por cesantia (Garantia de Ley) : " << (calcularCesantia(fechaACesar)) << endl;
-	p << "Monto a pagar por censantia: " << (int)((calcularCesantia(fechaACesar))*getPuesto()->getSalarioDiario());
+	p << "Monto a pagar por censantia: " << (int)((calcularCesantia(fechaACesar))*getPuesto()->getSalarioDiario())<<endl;
 	p << "Monto a cancelar de aguinaldo: " << (long)calculcarAguinaldo(fechaACesar) << endl;
 	p << "Monto a cancelar por ahorro escolar: " << (long)ahorroEscolar << endl;
 	p << "Monto a cancear por ahorro navidad: " << (long)ahorroNavidad << endl;
@@ -275,13 +275,18 @@ const string Planilla::toString()
 	p << "Fecha de Inicio Contrato: " << getFechaToString() << endl;
 	p << getEmpleado()->toString();
 	p << puesto1->toString() << endl;
-	if (esTemporal) {
-		
-		p <<"Tipo de Empleado: " << "EMPLEADO TEMPORAL" << endl;
+	if (activo) {
+		if (esTemporal) {
 
+			p << "Tipo de Empleado: " << "EMPLEADO TEMPORAL" << endl;
+
+		}
+		else {
+			p << "Tipo de Empleado: " << "EMPLEADO EN PROPIEDAD" << endl;
+		}
 	}
 	else {
-		p << "Tipo de Empleado: " << "EMPLEADO EN PROPIEDAD" << endl;
+		p << "Empleado Inactivo" << endl;
 	}
 	
 	return p.str();
