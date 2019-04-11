@@ -124,6 +124,13 @@ const void Planilla::viajarEnElTiempo(Fecha * fechaAViajar)
 	}
 }
 
+const string Planilla::getSerializacion()
+{
+	stringstream p;
+	p << getFecha()->getDia() << "," << getFecha()->getMes() << "," << getFecha()->getAno() << "," << getEmpleado()->getCedula() << "," << getEmpleado()->getNombre() << "," << getEmpleado()->getApellidos() << "," << getEmpleado()->getFechaNacimiento() << "," << getEmpleado()->getDireccion() << "," << getEmpleado()->getTelefono() << ","<<esTemporal<<"," << getPuesto()->getCodigo() << ";";
+	return p.str();
+}
+
 void Planilla::setUltimoPagoAguinaldo(Fecha * p)
 {
 	delete ultimoPagoAguinaldo;
@@ -155,8 +162,8 @@ double Planilla::getDeducciones(double p)
 		ahorro = (total*0.02);
 		diferenciaRenta = (total - limite);
 		renta = (diferenciaRenta*0.20);
-		int ahorroNav = total * porcentajeAhorroNav/100;
-		int ahorroEsco = total * porcentajeAhorroEscol/100;
+		double ahorroNav = (total * porcentajeAhorroNav)/100;
+		double ahorroEsco = (total * porcentajeAhorroEscol)/100;
 		deduccion = (cargaSocial + ahorro + renta+ ahorroEsco+ ahorroNav);
 		return deduccion;
 	}
@@ -166,8 +173,8 @@ double Planilla::getDeducciones(double p)
 		cargaSocial = (total*0.09);//Cargas Sociales
 		ahorro = (total*0.02);
 		deduccion = cargaSocial + ahorro;
-		int ahorroNav = total * porcentajeAhorroNav;
-		int ahorroEsco = total * porcentajeAhorroEscol;
+		double ahorroNav = (total * porcentajeAhorroNav)/100;
+		double ahorroEsco = (total * porcentajeAhorroEscol)/100;
 		deduccion = (cargaSocial + ahorro  + ahorroEsco + ahorroNav);
 		return deduccion;
 	}
@@ -182,8 +189,8 @@ double Planilla::getDeducciones(double p)
 	p << "Codigo de Puesto: " << getPuesto()->getCodigo() << "-->" << getPuesto()->getNombre() << endl;
 	p << "Salario Bruto--> " <<(long) getSalarioBruto(p1) << endl;
 	p << "Deducciones: " << endl;
-	p << "Carga Social (9%) ---> " << (long)(getSalarioBruto(p1)*-9/100) << endl;
-	p << "Ahorro Obligatorio (2%) ---> " << (long)(getSalarioBruto(p1)*-9/100) << endl;
+	p << "Carga Social (9%) ---> " << (long)((getSalarioBruto(p1)*-9)/100) << endl;
+	p << "Ahorro Obligatorio (2%) ---> " << (long)((getSalarioBruto(p1)*-2)/100) << endl;
 	if (getSalarioBruto(p1) > limite) {
 		int aCobrar = getSalarioBruto(p1) - limite;
 		p << "Impuesto de la Renta(20%) ---> " << (long)(aCobrar*-20/100) << endl;
@@ -275,7 +282,8 @@ const string Planilla::toString()
 	p << "Fecha de Inicio Contrato: " << getFechaToString() << endl;
 	p << getEmpleado()->toString();
 	p << puesto1->toString() << endl;
-	if (activo) {
+	if (activo==true) {
+		p << "Empleado ACTIVO" << endl;
 		if (esTemporal) {
 
 			p << "Tipo de Empleado: " << "EMPLEADO TEMPORAL" << endl;
@@ -286,7 +294,7 @@ const string Planilla::toString()
 		}
 	}
 	else {
-		p << "Empleado Inactivo" << endl;
+		p << "Empleado INACTIVO" << endl;
 	}
 	
 	return p.str();

@@ -32,6 +32,7 @@ public:
 	double calculcarAguinaldo(Fecha*);
 	void setFechaUltimaVacaciones(Fecha*);//
 	virtual const void viajarEnElTiempo(Fecha*);
+	virtual const string getSerializacion();
 	void setUltimoPagoAguinaldo(Fecha*);//
 	virtual const string retirarAhorros(Fecha*);
 	double getDeducciones(double p); //Le paso el salario Bruto

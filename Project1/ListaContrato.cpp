@@ -19,13 +19,60 @@ void ListaContratos::viajarEnElTiempo(Fecha * fechaAViajar)
 	}
 }
 
+bool ListaContratos::insertarSinRegistrar(Contrato * newContrato)
+{
+	if (existePosicion(newContrato->getEmpleado()->getCedula()) == false) {
+		primero = new NodoContrato(newContrato, primero);
+		return true;
+	}
+	else {
+		cout << "El empleado con cedula: " << newContrato->getEmpleado()->getCedula() << " YA SE ENCUENTRA CONTRATADO y corresponde a: " << endl;
+		cout << getPosicion(newContrato->getEmpleado()->getCedula())->toString() << endl;
+
+	}
+}
+
 void ListaContratos::insertar(Contrato * p)
 {
-	if (primero == NULL) {
-		primero = new NodoContrato(p, NULL);
-	} else
+	if (existePosicion(p->getEmpleado()->getCedula())==false) {
+		if (primero == NULL) {
+			primero = new NodoContrato(p, NULL);
+		}
+		else {
 
-		primero = new NodoContrato(p, primero);
+			primero = new NodoContrato(p, primero);
+		}
+		if (p->esPlanilla()) {
+			ofstream listaEmpleados;
+			listaEmpleados.open("ListaEmpleadosPlanilla.txt", ios::app);
+			if (!listaEmpleados.bad() && listaEmpleados.fail()) {
+				listaEmpleados << p->getSerializacion();
+				listaEmpleados.close();
+
+			}
+			else {
+				cout << "Error abriendo el archivo ListaEmpleadosPlanilla.txt" << endl;
+				system("pause");
+			}
+
+		}
+		else {
+			ofstream listaServProf("ListaEmpleadosServiciosProfesionales.txt", ios::app);
+			if (!listaServProf.bad()) {
+				listaServProf << p->getSerializacion();
+				listaServProf.close();
+			}
+			else {
+				cout << "Error abriendo el archivo ListaEmpleadosServiciosProfesionales.txt " << endl;
+				system("pause");
+			}
+		}
+	}
+	else {
+		cout << "El empleado con cedula: " << p->getEmpleado()->getCedula() << " YA SE ENCUENTRA CONTRATADO" << endl;
+		cout << getPosicion(p->getEmpleado()->getCedula())->toString() << endl;
+
+	}
 
 }
 
@@ -71,11 +118,21 @@ Contrato * ListaContratos::getPosicion(int p)
 				actual = actual->getSiguiente();
 			}
 		} 
-		cout << "algo pasa" << endl;
+		
 		return NULL;
 	}
 	else return NULL;
 	
+}
+
+bool ListaContratos::existePosicion(int p)
+{
+	if (getPosicion(p) != NULL) {
+		return true;
+	}
+	else {
+		return false;
+	}
 }
 
 string ListaContratos::toString()

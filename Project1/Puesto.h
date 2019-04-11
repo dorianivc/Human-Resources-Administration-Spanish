@@ -8,23 +8,23 @@ class Puesto
 {
 private:
 	string nombre;
-	string codigo;
+	int codigo;
 	string descripcion;
 	double salarioBase;
 public:
-	Puesto(string, string, string, double);
+	Puesto(string, int, string, double);
 	Puesto( Puesto&);
 	string getNombre();
 	void setNombre(string);
-	string getCodigo();
-	void setCodigo(string);
+	int getCodigo();
+	void setCodigo(int);
 	string getDescripcion();
 	void setDescripcion(string);
 	double getSalarioBase();
 	void setSalarioBase(double);
 	 string toString();
 	double getDeducciones(double p);
-	 string identificador();
+	 int identificador();
 	double getSalarioDiario();
 	
 	~Puesto();

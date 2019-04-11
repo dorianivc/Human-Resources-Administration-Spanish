@@ -116,6 +116,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AnalizadorArchivos.cpp" />
     <ClCompile Include="Contrato.cpp" />
     <ClCompile Include="Empleado.cpp" />
     <ClCompile Include="Empresa.cpp" />
@@ -132,6 +133,7 @@
     <ClCompile Include="ServiciosProfesionales.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AnalizadorArchivos.h" />
     <ClInclude Include="Contrato.h" />
     <ClInclude Include="Empleado.h" />
     <ClInclude Include="Empresa.h" />

@@ -1,5 +1,6 @@
 #pragma once
 #include "NodoPuesto.h"
+#include <fstream>
 #include <string>
 using namespace std;
 class ListaPuestos
@@ -10,12 +11,13 @@ private:
 public:
 	ListaPuestos();
 	void insertar(Puesto*);
+	bool insertarSinRegistrar(Puesto*);
 	int cuentaNodos();
 	bool listaVacia();
-	Puesto*  getPosicion(int);
-	Puesto* getPosicion(string);
+	bool existePosicion(int);
+	Puesto* getPosicion(int);
 	string toString();
-	bool eliminarIdentificador(string);
+	bool eliminarIdentificador(int);
 	~ListaPuestos();
 };
 

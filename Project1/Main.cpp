@@ -10,6 +10,7 @@
 #include "Planilla.h"
 #include "ServiciosProfesionales.h"
 #include "Empresa.h"
+#include "AnalizadorArchivos.h"
 #include "Fecha.h"
 using namespace std;
 
@@ -75,16 +76,10 @@ int main()
 	}
 	string fechaCentral = central->fechaToString();*/
 	Empresa* central = new Empresa("hP", " dds", " jns", new Fecha(01, 01, 2001));
-	Puesto* puestin = new Puesto("Labrador", "45", " ", 345000);
-	Planilla*  p = new Planilla(central->getFechaActual(), new Empleado(604560223, "Dorian", "ROBERTO", "", "", ""), puestin, true);
-	p->setPorcentajeAhorroEscolar(10);
-	Planilla*  j = new Planilla(central->getFechaActual(), new Empleado(604560224, "Jorge", "RT", "", "", ""), puestin, false);
-	ServiciosProfesionales* i = new ServiciosProfesionales(central->getFechaActual(), new Empleado(606, "Profesional", "", "", "", ""), puestin, new Fecha(01, 04, 2001));
-	j->setPorcentajeAhorroEscolar(15);
-	central->addPuesto(puestin);
-	central->addContrato(i);
-	central->addContrato(p);
-	central->addContrato(j);
+	Puesto * puestin = new Puesto("Loquera", 777, "nada,", 46000.0);
+	//central->addPuesto(puestin);
+	central->addContrato(new ServiciosProfesionales(new Fecha(01, 01, 2001), new Empleado(604560225, "dorian", "vallecillo", "f", "g", "h"), puestin, new Fecha(01, 01, 2002)));
+	//AnalizadorArchivos::ingresarEmpleados(central->getListaEmpleados(), central->getListaPuestos());
 	bool exito = 0;
 	//---------------------FIN: Creacion de la empresa------------------------//
 
@@ -109,7 +104,9 @@ int main()
 		cout << "(8) --> Otorgar Vacaciones" << endl;
 		cout << "(9) --> Cesar Empleado" << endl;
 		cout << "(10) --> Viajar en el tiempo" << endl;
-		cout << "(11) --> SALIR" << endl;
+		cout << "(11) --> Cargar puestos desde registro" << endl;
+		cout << "(12) --> Cargar empleados desde registro" << endl;
+		cout << "(13) --> SALIR" << endl;
 
 		//--------------------FIN: Creacion de Menu Principal-------------------------//
 
@@ -117,8 +114,9 @@ int main()
 		try {
 			cin >> eleccionMenuPrincipal;
 			Puesto* puestoAagregar;
-			string nombrePuesto, codigoPuesto, descripcionPuesto; double salarioBasePuesto;
+			string nombrePuesto,  descripcionPuesto; double salarioBasePuesto;
 			unsigned eleccionSubMenuContratacion;
+			int codigoPuesto;
 			Empleado* empleadoAux;
 			Puesto* puestoAux=NULL;
 			string nombreEmpleado, apellidoEmpleado, fechaNacimientoEmpleado, direccionEmpleado, telefonoEmpleado;
@@ -128,7 +126,7 @@ int main()
 			bool exito = 0;
 			int dia, mes, ano;
 			int cedAux;
-			string subEleccion;
+			int subEleccion;
 			Fecha* fechaAviajar = NULL;
 			
 			switch (eleccionMenuPrincipal){ 
@@ -138,13 +136,13 @@ int main()
 				cout << "Digite el nombre del Puesto" << endl;
 				getline(cin, nombrePuesto);
 				cout << "Digite el codigo del Puesto" << endl;
-				getline(cin, codigoPuesto);
-				system("cls");
+				cin >> codigoPuesto;
+				cin.ignore();
 				cout << "Escriba una descripcion del Puesto ---> " << nombrePuesto << " : " << codigoPuesto << " <---" << endl;
+
 				getline(cin, descripcionPuesto);
 				do {
 					system("cls");
-					cin.ignore();
 					cout << "Digite el Salario Base del puesto a crear" << endl;
 
 					try {
@@ -159,8 +157,15 @@ int main()
 						system("pause");
 					}
 					exito = 1;
-					central->getListaPuestos()->insertar(new Puesto(nombrePuesto, codigoPuesto, descripcionPuesto, salarioBasePuesto));
+					if (central->getListaPuestos()->existePosicion(codigoPuesto) == false) {
+						central->getListaPuestos()->insertar(new Puesto(nombrePuesto, codigoPuesto, descripcionPuesto, salarioBasePuesto));
+					}
+					else {
+						cout << "Codigoo de puesto ya existe y esta relacionado a: " <<endl<< central->getListaPuestos()->getPosicion(codigoPuesto)->toString() << endl;
+						system("pause");
+					}
 				} while (exito != 1);//------------------------> FIN ELECCION 1
+				
 				break;
 			case 2:
 
@@ -172,13 +177,11 @@ int main()
 				cout << central->getListaPuestos()->toString() << endl;
 				cout << endl;
 				cout << endl;
-				cout << "Digite el codigo del puesto a eliminar" << endl;
-				getline(cin, codigoPuesto);
 				do {
 					cout << "Digite el codigo del puesto a eliminar" << endl;
-					getline(cin, codigoPuesto);
+					cin>> codigoPuesto;
 					try {
-						if (central->getListaPuestos()->eliminarIdentificador(codigoPuesto) != false) {
+						if (central->eliminarPuesto(codigoPuesto) != false) {
 							cout << "Puesto eliminado" << endl;
 							exito = 1;
 							system("pause");
@@ -198,133 +201,145 @@ int main()
 				} while (exito != 1);//-----------------> FIN ELECCION 2
 				break;
 			case 3:
-				cin.ignore();
-				cout << "Digite el numero de Cedulad del empleado" << endl;
-				cin >> cedAux;
-				cout << "Digite el nombre del empleado" << endl;
-				getline(cin, nombreEmpleado);
-				system("cls");
-				cout << "Digile los apellidos del empleado" << endl;
-				getline(cin, apellidoEmpleado);
-				system("cls");
-				cout << "Digite la Fecha de Nacimiento del empleado" << endl;
-				getline(cin, fechaNacimientoEmpleado);
-				system("cls");
-				cout << "Digite la direccion domestica del empleado" << endl;
-				getline(cin, direccionEmpleado);
-				system("cls");
-				cout << "Digite el numero de telefono del empleado" << endl;
-				getline(cin, telefonoEmpleado);
-
-
 				
+				if (central->getListaPuestos()->listaVacia() == false) {
 					cin.ignore();
+					cout << "Digite el numero de Cedulad del empleado" << endl;
+					cin >> cedAux;
+					cin.ignore();
+					cout << "Digite el nombre del empleado" << endl;
+					getline(cin, nombreEmpleado);
 					system("cls");
-					cout << "Es el puesto de : " << nombreEmpleado << " " << apellidoEmpleado << "  TEMPORAL?" << endl;
-					cout << "Digite 1 si es Temporal" << endl;
-					cout << "Digite 0 si es a Propiedad" << endl;
-					
-					
+					cout << "Digile los apellidos del empleado" << endl;
+					getline(cin, apellidoEmpleado);
+					system("cls");
+					cout << "Digite la Fecha de Nacimiento del empleado" << endl;
+					getline(cin, fechaNacimientoEmpleado);
+					system("cls");
+					cout << "Digite la direccion domestica del empleado" << endl;
+					getline(cin, direccionEmpleado);
+					system("cls");
+					cout << "Digite el numero de telefono del empleado" << endl;
+					getline(cin, telefonoEmpleado);
+
+
+					if (central->getListaEmpleados()->existePosicion(cedAux) == false) {
+						cin.ignore();
+						system("cls");
+						cout << "Es el puesto de : " << nombreEmpleado << " " << apellidoEmpleado << "  TEMPORAL?" << endl;
+						cout << "Digite 1 si es Temporal" << endl;
+						cout << "Digite 0 si es a Propiedad" << endl;
+
+
 
 						cin >> esTemporal;
 
-					
-					
-				
 
-				
 
-				cout << "Digite el numero del codigo del puesto al que desea contratar" << endl;
-				cout << central->getListaPuestos()->toString() << endl;
-				do {
-					exito = 0;
-					try {
-						getline(cin, subEleccion);
-						if (central->getListaPuestos()->getPosicion(subEleccion) == NULL)
-						{
-							string exepcion = "La posicion ingresada no existe";
-							throw exepcion;
-						}
-						else {
-							puestoAux = central->getListaPuestos()->getPosicion(subEleccion);
-							exito = 1;
-						}
-					}
-					catch (string exepcion) {
-						cout << exepcion << endl;
-						system("pause");
-					}
-					
 
-					
-				} while (exito != 1);
-				empleadoAux = new Empleado(cedAux, nombreEmpleado,apellidoEmpleado,fechaNacimientoEmpleado,direccionEmpleado,telefonoEmpleado);
-				cout << "Digite 1 si desea contratar por Planilla(Temporal o Propiedad)" << endl;
-				cout << "Digite 2 si desea contratar por servicios profesionales" << endl;
 
-				try {
-					cin.ignore();
-					cin >> eleccionSubMenuContratacion;
-					if (eleccionSubMenuContratacion == 1) {
-						central->getListaEmpleados()->insertar(new Planilla(central->getFechaActual(), empleadoAux, puestoAux, esTemporal));
 
-					}
-					else if (eleccionSubMenuContratacion == 2) {
-						Fecha* cesantia;
-						cout << "Digite una fecha de Censantia" << endl;
+
+						cout << "Digite el numero del codigo del puesto al que desea contratar" << endl;
+						cout << central->getListaPuestos()->toString() << endl;
 						do {
-							int dia, mes, ano;
-							system("cls");
+							exito = 0;
 							try {
-
-								cout << "Digite el dia de la fecha (Fortmato --> [1,31] )" << endl;
-								cin >> dia;
-								if (dia > 31 || dia < 0) {
-									string excepcion = " Digito de dia Invalido ";
-									throw excepcion;
+								cin >> subEleccion;
+								if (central->getListaPuestos()->getPosicion(subEleccion) == NULL)
+								{
+									string exepcion = "La posicion ingresada no existe";
+									throw exepcion;
 								}
-								system("cls");
-								cout << "Digite el mes de la fecha (Fortmato-- > [1, 12])" << endl;
-								cin >> mes;
-								if (mes > 12 || mes < 0) {
-									string excepcion = " Digito de mes Invalido ";
-									throw excepcion;
+								else {
+									puestoAux = central->getListaPuestos()->getPosicion(subEleccion);
+									exito = 1;
 								}
-								system("cls");
-								cout << "Digite el annio de la fecha (Fortmato-- > [2000, +00[  )" << endl;
-								cin >> ano;
-								if (ano < 2000) {
-									string excepcion = " Digito de annio Invalido ";
-									throw excepcion;
-								}
-
 							}
-							catch (string excepcion) {
-
-								cout << "Se ha producido una exepcion:  " << excepcion << endl;
-								system("PAUSE");
-
+							catch (string exepcion) {
+								cout << exepcion << endl;
+								system("pause");
 							}
-							cesantia = new Fecha(dia, mes, ano);
-							if (cesantia->Distancia(central->getFechaActual(), cesantia) > 0) {
 
-								exito = 1;
-							}
-							else
-							{
-								cout << "La fecha de cesantia ingresada es invalida" << endl;
 
-							}
+
 						} while (exito != 1);
+						empleadoAux = new Empleado(cedAux, nombreEmpleado, apellidoEmpleado, fechaNacimientoEmpleado, direccionEmpleado, telefonoEmpleado);
+						cout << "Digite 1 si desea contratar por Planilla(Temporal o Propiedad)" << endl;
+						cout << "Digite 2 si desea contratar por servicios profesionales" << endl;
 
-						central->getListaEmpleados()->insertar(new ServiciosProfesionales(central->getFechaActual(), empleadoAux, puestoAux, cesantia));
+						try {
+							cin.ignore();
+							cin >> eleccionSubMenuContratacion;
+							if (eleccionSubMenuContratacion == 1) {
+								central->getListaEmpleados()->insertar(new Planilla(central->getFechaActual(), empleadoAux, puestoAux, esTemporal));
+
+							}
+							else if (eleccionSubMenuContratacion == 2) {
+								Fecha* cesantia;
+								cout << "Digite una fecha de Censantia" << endl;
+								do {
+									int dia, mes, ano;
+									system("cls");
+									try {
+
+										cout << "Digite el dia de la fecha (Fortmato --> [1,31] )" << endl;
+										cin >> dia;
+										if (dia > 31 || dia < 0) {
+											string excepcion = " Digito de dia Invalido ";
+											throw excepcion;
+										}
+										system("cls");
+										cout << "Digite el mes de la fecha (Fortmato-- > [1, 12])" << endl;
+										cin >> mes;
+										if (mes > 12 || mes < 0) {
+											string excepcion = " Digito de mes Invalido ";
+											throw excepcion;
+										}
+										system("cls");
+										cout << "Digite el annio de la fecha (Fortmato-- > [2000, +00[  )" << endl;
+										cin >> ano;
+										if (ano < 2000) {
+											string excepcion = " Digito de annio Invalido ";
+											throw excepcion;
+										}
+
+									}
+									catch (string excepcion) {
+
+										cout << "Se ha producido una exepcion:  " << excepcion << endl;
+										system("PAUSE");
+
+									}
+									cesantia = new Fecha(dia, mes, ano);
+									if (cesantia->Distancia(central->getFechaActual(), cesantia) > 0) {
+
+										exito = 1;
+									}
+									else
+									{
+										cout << "La fecha de cesantia ingresada es invalida" << endl;
+
+									}
+								} while (exito != 1);
+
+								central->getListaEmpleados()->insertar(new ServiciosProfesionales(central->getFechaActual(), empleadoAux, puestoAux, cesantia));
+							}
+						}
+						catch (string p) {
+							cout << "Eleccion incorrecta o mal digitada" << endl;
+							system("pause");
+						}
 					}
+else {
+cout << "Ya existe un empleado relacionado al numero de cedula: " << cedAux << endl;
+cout << "Corresponde a : " << endl << central->getListaEmpleados()->getPosicion(cedAux)->toString() << endl;
+}
 				}
-				catch (string p) {
-					cout << "Eleccion incorrecta o mal digitada" << endl;
-					system("pause");
-				}
-
+ else {
+ cout << "No hay puestos disponibles para contratar empleados" << endl;
+}
+system("pause");
 				break;
 				case 4:
 					cout << central->toString() << endl;
@@ -439,10 +454,22 @@ int main()
 					central->getListaEmpleados()->viajarEnElTiempo(fechaAviajar);
 					central->setFecha(fechaAviajar);
 					break;
-				case 11:
+				case 13:
 					salirMenu = 1;
 					break;
-					
+				case 11:
+					AnalizadorArchivos::ingresarPuestos(central->getListaPuestos());
+					break;
+				case 12:
+					if (central->getListaPuestos()->listaVacia() == false) {
+						AnalizadorArchivos::ingresarEmpleados(central->getListaEmpleados(), central->getListaPuestos());
+						
+					}
+					else {
+						cout << "No hay puestos disponibles a contratar" << endl;
+						system("pause");
+					}
+					break;
 				default:
 					string p;
 					throw p;

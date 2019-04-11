@@ -10,7 +10,35 @@ ListaPuestos::ListaPuestos()
 
 void ListaPuestos::insertar(Puesto * newPuesto)
 {
-	primero = new NodoPuesto(newPuesto, primero);
+	if (existePosicion(newPuesto->getCodigo()) == false) {
+		primero = new NodoPuesto(newPuesto, primero);
+		ofstream puestos("Puestos.txt", ios::app);
+		if (!puestos.bad() && !puestos.fail()) {
+			puestos << newPuesto->getNombre() << "," << newPuesto->getCodigo() << "," << newPuesto->getDescripcion() << "," << newPuesto->getSalarioBase() << ";";
+
+		}
+		else {
+			cout << "Error al abrir el archivo" << endl;
+		}
+		puestos.close();
+	}
+	else {
+
+		cout << "El puesto codigo: " << newPuesto->getCodigo() << " YA EXISTE y corresponde a: " <<endl<< getPosicion(newPuesto->getCodigo())->toString() << endl;
+	}
+	
+}
+
+bool ListaPuestos::insertarSinRegistrar(Puesto * newPuesto)
+{
+	if (existePosicion(newPuesto->getCodigo()) == false) {
+		primero = new NodoPuesto(newPuesto, primero);
+		return true;
+	}
+	else {
+
+		cout << "El puesto codigo: " << newPuesto->getCodigo() << " YA EXISTE y corresponde a: " << endl << getPosicion(newPuesto->getCodigo())->toString() << endl;
+	}
 }
 
 int ListaPuestos::cuentaNodos()
@@ -30,26 +58,19 @@ bool ListaPuestos::listaVacia()
 	return  (primero == NULL) ? true : false;
 }
 
-Puesto * ListaPuestos::getPosicion(int p)
+bool ListaPuestos::existePosicion(int p)
 {
-	actual = primero;
-	int can = 0;
-	if (listaVacia() == false && p <= cuentaNodos()) {
-		while (actual != NULL)
-		{
-			can++;
-			actual = actual->getSiguiente();
-			if (p == can) {
-				return actual->getInfo();
-			}
-		}
+	if (getPosicion(p) != NULL) {
+		return true;
 	}
 	else {
-		return NULL;
+		return false;
 	}
 }
 
-Puesto * ListaPuestos::getPosicion(string cod)
+
+
+Puesto * ListaPuestos::getPosicion(int cod)
 {
 	if (primero != NULL) {
 		actual = primero;
@@ -82,7 +103,7 @@ string ListaPuestos::toString()
 	else return "Lista Vacia";
 }
 
-bool ListaPuestos::eliminarIdentificador(string cod)
+bool ListaPuestos::eliminarIdentificador(int cod)
 {
 	actual = primero;
 	NodoPuesto* auxBorrar;

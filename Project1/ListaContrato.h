@@ -12,11 +12,13 @@ class ListaContratos
 public:
 	ListaContratos();
 	void viajarEnElTiempo(Fecha*);
+	bool insertarSinRegistrar(Contrato*);
 	void insertar(Contrato*);
 	int cuentaNodos();
 	bool listaVacia();
 	void actualizarAhorros(int);
 	Contrato* getPosicion(int);
+	bool existePosicion(int);
 	string toString();
 	string pagarSalarios(Fecha*);
 	string otorgarVacaciones(Fecha*, int);

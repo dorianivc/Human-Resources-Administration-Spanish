@@ -56,6 +56,13 @@ const string ServiciosProfesionales::otorgarVacaciones(Fecha * p1)
 	return p.str();
 }
 
+const string ServiciosProfesionales::getSerializacion()
+{
+	stringstream p;
+	p << getFecha()->getDia() << "," << getFecha()->getMes() << "," << getFecha()->getAno() << "," << getEmpleado()->getCedula() << "," << getEmpleado()->getNombre() << "," << getEmpleado()->getApellidos() << "," << getEmpleado()->getFechaNacimiento() << "," << getEmpleado()->getDireccion() << "," << getEmpleado()->getTelefono() <<"," << getPuesto()->getCodigo() << ","<<fechaCesantia->getDia()<<","<<fechaCesantia->getMes()<<","<<fechaCesantia->getAno()<<";";
+	return p.str();
+}
+
 const int ServiciosProfesionales::calcularCesantia(Fecha * fechaACalcular)
 {
 	int dias = getFecha()->Distancia(getFecha(), fechaACalcular);
@@ -88,7 +95,7 @@ const string ServiciosProfesionales::cesarEmpleado(Fecha * fechaACesar)
 {
 	stringstream p;
 	p << "Cesando empleado: " << endl;
-	p << "Fecha de cesantia: " << fechaACesar->toStringFecha() << endl;
+	p << "Fecha de cesantia aplicada: " << fechaACesar->toStringFecha() << endl;
 	p << toString() << endl;
 	p << "Dias a pagar por cesantia (Garantia de Ley) : " << (calcularCesantia(fechaACesar)) << endl;
 	p << "Monto a pagar por censantia: " << (long)((calcularCesantia(fechaACesar))*getPuesto()->getSalarioDiario());

@@ -22,12 +22,12 @@ public:
 	Empresa(string, string, string, Fecha* );
 	Empresa(Empresa&);
 	void viajarAdelanteEnELTiempo(Fecha*);
-	void addPuesto(string, string, string, double);
+	void addPuesto(string, int, string, double);
 	void pagarAguinaldo();
 	void addPuesto(Puesto*);
 	void setFecha(Fecha*);
 	void addContrato(Contrato*);
-	bool eliminarPuesto(string);
+	bool eliminarPuesto(int);
 	string getNombre();
 	string getDireccion();
 	void setDireccion(string);

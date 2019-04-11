@@ -19,6 +19,7 @@ public:
 	virtual const void viajarEnElTiempo(Fecha*)=0;
 	void setEmpleado(Empleado*);
 	Puesto* getPuesto();
+	virtual const string getSerializacion() = 0;;
 	void setPuesto(Puesto*);
 	string getFechaToString();
 	Fecha* getFecha();

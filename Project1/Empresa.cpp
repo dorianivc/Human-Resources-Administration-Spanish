@@ -48,7 +48,7 @@ void Empresa::viajarAdelanteEnELTiempo(Fecha * fechaFutura)
 	}
 }
 
-void Empresa::addPuesto(string nombre, string codigo, string descripcion, double salarioBase)
+void Empresa::addPuesto(string nombre, int codigo, string descripcion, double salarioBase)
 {
 	puestos->insertar(new Puesto(nombre, codigo, descripcion, salarioBase));
 }
@@ -75,7 +75,7 @@ void Empresa::addContrato(Contrato * p)
 	listaEmpleados->insertar(p);
 }
 
-bool Empresa::eliminarPuesto(string cod)
+bool Empresa::eliminarPuesto(int cod)
 {
 	return(puestos->eliminarIdentificador(cod));
 }

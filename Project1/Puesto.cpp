@@ -2,7 +2,7 @@
 
 
 
-Puesto::Puesto(string nom, string cod, string desc, double newSalarioBase)
+Puesto::Puesto(string nom, int cod, string desc, double newSalarioBase)
 {
 	nombre = nom;
 	codigo = cod;
@@ -29,12 +29,12 @@ void Puesto::setNombre(string nom)
 	nombre = nom;
 }
 
-string Puesto::getCodigo()
+int Puesto::getCodigo()
 {
 	return codigo;
 }
 
-void Puesto::setCodigo(string cod)
+void Puesto::setCodigo(int cod)
 {
 	codigo = cod;
 }
@@ -93,7 +93,7 @@ double Puesto::getDeducciones(double p)
 
 
 
-string Puesto::identificador()
+int Puesto::identificador()
 {
 	return codigo;
 }

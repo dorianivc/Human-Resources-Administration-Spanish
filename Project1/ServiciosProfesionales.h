@@ -13,6 +13,7 @@ public:
 	virtual const bool pagarAhorro();
 	virtual const string  pagarAguinaldo(Fecha* p1 = NULL);
 	virtual const string otorgarVacaciones(Fecha* p1 = NULL);
+	virtual const string getSerializacion();
 	virtual const int calcularCesantia(Fecha*);
 	virtual const void viajarEnElTiempo(Fecha*);
 	virtual const string cesarEmpleado(Fecha*);

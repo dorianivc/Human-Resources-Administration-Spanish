@@ -26,6 +26,8 @@ Puesto * Contrato::getPuesto()
 	return puesto1;
 }
 
+
+
 void Contrato::setPuesto(Puesto * newPuesto)
 {
 	puesto1 = newPuesto;
