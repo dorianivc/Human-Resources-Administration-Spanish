@@ -40,20 +40,30 @@ int Planilla::getPorcentajeAhorroEscolar()
 	return this->porcentajeAhorroEscol;
 }
 
-const void Planilla::pagarAguinaldo(Fecha *p)
+const string Planilla::pagarAguinaldo(Fecha * p)
 {
-	ultimoPagoAguinaldo = p;
+	stringstream k;
+	k <<  "Pago de Aguinaldo a la fecha: " << p->toStringFecha() << "correspondiente al empleado" << getEmpleado()->getNombre() << " " << getEmpleado()->getApellidos() << " Cedula: " << getEmpleado()->getCedula() << endl;
+	k << "Monto acumulado: " << calculcarAguinaldo(p)<< endl;
+	ultimoPagoAguinaldo = new Fecha(p);
+	k << "-------- Pago de aguinaldo realizado con exito-----------" << endl;
+	return k.str();
+
 }
 
-const void Planilla:: otorgarVacaciones(Fecha * p)
+
+
+const string Planilla:: otorgarVacaciones(Fecha * p)
 {
+	stringstream k;
 	if (vacacionesAcumuladas(p) > 0) {
-		cout << "Otorgando "<< vacacionesAcumuladas(p) << " Dias de Vacaciones" << endl;
+		k << "Otorgando "<< vacacionesAcumuladas(p) << " Dias de Vacaciones" << " correspondiente al empleado" << getEmpleado()->getNombre() << " " << getEmpleado()->getApellidos() << " Cedula: " << getEmpleado()->getCedula() << endl;
 		fechaUltimasVacaciones = p;
 	}
 	else {
-		cout << "No posee dias de vacaciones" << endl;
+		k<< "No posee dias de vacaciones" << endl;
 	}
+	return k.str();
 }
 
 void Planilla::setPorcentajeAhorroEscolar(int newPorcentaje)
@@ -85,7 +95,7 @@ const bool Planilla::pagarAhorro()
 }
 
 double Planilla::calculcarAguinaldo(Fecha* aCalcular)
-{//CORREGIR;
+{
 	unsigned dias = getFecha()->Distancia(ultimoPagoAguinaldo, aCalcular);
 	double aux = getPuesto()->getSalarioBase() / 360;
 	double aguinaldo = (double)dias*  aux;
@@ -100,10 +110,40 @@ void Planilla::setFechaUltimaVacaciones(Fecha * p)
 
 }
 
+const void Planilla::viajarEnElTiempo(Fecha * fechaAViajar)
+{
+	int dias=getFecha()->Distancia(getFecha(), fechaAViajar);
+	if (dias > 29) {
+		int veces = dias / 30;
+		for (int i = 0; i < veces; i++) {
+			pagarAhorro();
+		}
+		if (esTemporal == true && dias >= 90) {
+			esTemporal = false;
+		}
+	}
+}
+
 void Planilla::setUltimoPagoAguinaldo(Fecha * p)
 {
 	delete ultimoPagoAguinaldo;
 	ultimoPagoAguinaldo = new Fecha(p);
+}
+
+const string Planilla::retirarAhorros(Fecha* p)
+{
+	stringstream k;
+	k<< "Retiro de Ahorro de " << getEmpleado()->getNombre() << " " << getEmpleado()->getApellidos() << "  Cedula: " << getEmpleado()->getCedula() << endl;
+	k << "Montos ahorrados a la fecha: " << p->toStringFecha() << endl;
+	k << "Ahorro de Navidad: " <<(long) ahorroNavidad << endl;
+	k << "Ahorro Escolar: " << (long)ahorroEscolar << endl;
+	k << "Total de ahorro: " << (long)(ahorroEscolar + ahorroNavidad) << endl;
+	ahorroEscolar = 0;
+	ahorroNavidad = 0;
+	k << "-------- Ahorros retirados con exito -----------" << endl;
+	return k.str();
+
+
 }
 
 double Planilla::getDeducciones(double p)
@@ -133,11 +173,11 @@ double Planilla::getDeducciones(double p)
 	}
 }
 
- string Planilla::imprimirColillaDePago(string  fechaPago, double p1)
+ const string  Planilla::imprimirColillaDePago(Fecha*  fechaPago, double p1)
 {
 	int limite = 1200000;
 	stringstream p;
-	p << "Colilla de Pago" << "     " << "Fecha: " << fechaPago << "    " /*<< "Pago Correspondiente al Mes: " << fechaPago->getMes() */ << endl;
+	p << "Colilla de Pago" << "     " << "Fecha: " << fechaPago->toStringFecha() << "    " << "Pago Correspondiente al Mes: " << fechaPago->getMes()  << endl;
 	p << "Cedula: " << getEmpleado()->getCedula() << " " << "Nombre : " << getEmpleado()->getNombre() << " " << getEmpleado()->getApellidos() << endl;
 	p << "Codigo de Puesto: " << getPuesto()->getCodigo() << "-->" << getPuesto()->getNombre() << endl;
 	p << "Salario Bruto--> " <<(long) getSalarioBruto(p1) << endl;
@@ -155,8 +195,8 @@ double Planilla::getDeducciones(double p)
 	p << "Ahorros:" << endl;
 	p << "Ahorro Navidad: " << ahorroNavidad << endl;
 	p << "Ahorro Escolar: " << ahorroEscolar << endl;
-	//p << "aguinaldo::::" << (long)calculcarAguinaldo(fechaPago) << endl;
-	//p << "Dias de Vacaciones::: " << vacacionesAcumuladas(fechaPago) << endl;
+	p << "aguinaldo::::" << (long)calculcarAguinaldo(fechaPago) << endl;
+	p << "Dias de Vacaciones::: " << vacacionesAcumuladas(fechaPago) << endl;
 	p << "-----------FIN-----------" << endl;
 	return p.str();
 
@@ -178,6 +218,48 @@ double Planilla::getSalarioNeto(double p)
 const bool Planilla::esPlanilla()
 {
 	return true;
+}
+
+const int Planilla::calcularCesantia(Fecha * fechaACalcular)
+{
+	int dias = getFecha()->Distancia(getFecha(), fechaACalcular);
+	if (dias > 0) {
+		if (dias > 11) {
+			int diasCesantia = (dias / 12);
+			if (diasCesantia > 240) {
+				diasCesantia = 240;
+				return diasCesantia;
+			}
+			else if(diasCesantia<=240&&diasCesantia>0) {
+				return diasCesantia;
+			}
+		}
+
+	}
+	else return 0;
+}
+
+const string Planilla::cesarEmpleado(Fecha * fechaACesar)
+{
+	stringstream p;
+	p << "Cesando empleado: " << endl;
+	p << toString() << endl;
+	p << "Dias de vacaciones acumuladas a pagar : " << vacacionesAcumuladas(fechaACesar) << endl;
+	p << "Monto a cancelar por vacaciones: " << (long)((vacacionesAcumuladas(fechaACesar))*getPuesto()->getSalarioDiario()) << endl;
+	p << "Dias a pagar por cesantia (Garantia de Ley) : " << (calcularCesantia(fechaACesar)) << endl;
+	p << "Monto a pagar por censantia: " << (int)((calcularCesantia(fechaACesar))*getPuesto()->getSalarioDiario());
+	p << "Monto a cancelar de aguinaldo: " << (long)calculcarAguinaldo(fechaACesar) << endl;
+	p << "Monto a cancelar por ahorro escolar: " << (long)ahorroEscolar << endl;
+	p << "Monto a cancear por ahorro navidad: " << (long)ahorroNavidad << endl;
+	double suma = (vacacionesAcumuladas(fechaACesar)) + (((vacacionesAcumuladas(fechaACesar))*getPuesto()->getSalarioDiario())) + (((calcularCesantia(fechaACesar))*getPuesto()->getSalarioDiario()) + (calculcarAguinaldo(fechaACesar)))+ ahorroEscolar+ahorroNavidad;
+	p << "Total a Cancelar por la empresa: " << (long)suma << endl;
+	ultimoPagoAguinaldo = fechaACesar;
+	fechaUltimasVacaciones = fechaACesar;
+	porcentajeAhorroEscol = 0;
+	porcentajeAhorroNav = 0;
+	activo = false;
+	return p.str();
+	
 }
 
 const string Planilla::toString()

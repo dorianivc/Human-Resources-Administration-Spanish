@@ -13,6 +13,7 @@ public:
 	int cuentaNodos();
 	bool listaVacia();
 	Puesto*  getPosicion(int);
+	Puesto* getPosicion(string);
 	string toString();
 	bool eliminarIdentificador(string);
 	~ListaPuestos();

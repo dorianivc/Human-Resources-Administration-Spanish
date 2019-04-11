@@ -8,6 +8,17 @@ ListaContratos::ListaContratos()
 	actual = NULL;
 }
 
+void ListaContratos::viajarEnElTiempo(Fecha * fechaAViajar)
+{
+	if (primero != NULL) {
+		actual = primero;
+		while (actual != NULL) {
+			actual->getInfo()->viajarEnElTiempo(fechaAViajar);
+			actual = actual->getSiguiente();
+		}
+	}
+}
+
 void ListaContratos::insertar(Contrato * p)
 {
 	if (primero == NULL) {
@@ -47,20 +58,26 @@ void ListaContratos::actualizarAhorros(int veces)
 	}
 }
 
-NodoContrato * ListaContratos::getPosicion(int p)
+Contrato * ListaContratos::getPosicion(string p)
 {
-	actual = primero;
-	int can = 0;
-	if (listaVacia() == false && p<=cuentaNodos()) {
-	while (actual != NULL)
-	{
-		can++;
-		actual = actual->getSiguiente();
-		if (p == can) {
-			return actual;
+	
+	if (primero != NULL) {
+		actual = primero;
+		while (actual != NULL) {
+			if (actual->getInfo()->getEmpleado()->getCedula() == p) {
+				return actual->getInfo();
+			}
+			else
+				actual = actual->getSiguiente();
 		}
+		return NULL;
 	}
+	else {
+		cout << "Lista Vacia" << endl;
+		cout << "Se retornara NULL" << endl;
+		return NULL;
 	}
+	
 }
 
 string ListaContratos::toString()
@@ -81,16 +98,51 @@ string ListaContratos::toString()
 	else return "Lista Vacia";
 }
 
-void ListaContratos::pagarSalarios(string fechaActual)
+string ListaContratos::pagarSalarios(Fecha* fechaActual)
 {
+	stringstream p;
 	if (primero != NULL) {
 		actual = primero;
 		while (actual != NULL) {
-			actual->getInfo()->imprimirColillaDePago(fechaActual);
+			p << actual->getInfo()->imprimirColillaDePago(fechaActual) << endl;
 			actual = actual->getSiguiente();
 		}
 	}
+	ofstream reporteSalarios("ReporteSalarios.txt", ios::app);
+	if (!reporteSalarios.bad()) {
+		reporteSalarios << p.str() << endl;
+	}
+	else {
+		cout << "Error creando el archivo:  Reporte de Salarios" << endl;
+	}
+	reporteSalarios.close();
+	return p.str();
 }
+
+string ListaContratos::otorgarVacaciones(Fecha * fechita, string ced)
+{
+	stringstream p;
+	if (primero != NULL) {
+		actual = primero;
+		while (actual != NULL) {
+			if (actual->getInfo()->getEmpleado()->getCedula() == ced) {
+				p << actual->getInfo()->otorgarVacaciones(fechita);
+				return p.str();
+			}
+			else {
+				actual = actual->getSiguiente();
+			}
+		}
+		p << "Empleado no existe" << endl;
+		return p.str();
+	}
+	else {
+		p << "Empleado no existe---> Lista Vacia" << endl;
+		return p.str();
+	}
+}
+
+
 
 bool ListaContratos::eliminarIdentificador(string cod)
 {
@@ -125,15 +177,22 @@ bool ListaContratos::eliminarIdentificador(string cod)
 	else return false;
 }
 
-void ListaContratos::pagarAguinaldos(Fecha*p)
+string ListaContratos::pagarAguinaldos(Fecha*p)
 {
+	stringstream k;
 	if (primero != NULL) {
+		k << "Pagando aguinaldos a la fecha de: " << p->toStringFecha() << endl;
 		actual = primero;
 		while (actual != NULL) {
-			actual->getInfo()->pagarAguinaldo(p);
+			k << actual->getInfo()->pagarAguinaldo(p) << endl;
 			actual = actual->getSiguiente();
 		}
 	}
+	else {
+		k << "No posee empleados para realizar pago de aguinaldos" << endl;
+	}
+
+	return k.str();
 }
 
 
@@ -141,7 +200,7 @@ void ListaContratos::pagarAguinaldos(Fecha*p)
 ListaContratos::~ListaContratos()
 {
 	actual = primero;
-	while (actual != NULL) {
+	while (primero != NULL) {
 		actual = primero;
 		primero = primero->getSiguiente();
 		delete actual;

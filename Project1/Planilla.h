@@ -1,4 +1,7 @@
 #pragma once
+#include <string>
+#include <sstream>
+#include <iostream>
 #include "Fecha.h"
 #include "Contrato.h"
 class Planilla :
@@ -19,8 +22,8 @@ public:
 	int vacacionesAcumuladas(Fecha*);
 	int getPorcentajeAhorroNavidad();
 	int getPorcentajeAhorroEscolar();
-	virtual const void pagarAguinaldo(Fecha*);
-	virtual const void otorgarVacaciones(Fecha*);
+	virtual const string pagarAguinaldo(Fecha*);
+	virtual const string otorgarVacaciones(Fecha*);
 	void setPorcentajeAhorroEscolar(int);
 	void setPorcentajeAhorroNavidad(int);
 	void addAhorroNavidad();
@@ -28,12 +31,16 @@ public:
 	virtual const bool pagarAhorro();
 	double calculcarAguinaldo(Fecha*);
 	void setFechaUltimaVacaciones(Fecha*);//
+	virtual const void viajarEnElTiempo(Fecha*);
 	void setUltimoPagoAguinaldo(Fecha*);//
+	virtual const string retirarAhorros(Fecha*);
 	double getDeducciones(double p); //Le paso el salario Bruto
-	virtual  string imprimirColillaDePago(string, double p=0);
+	virtual const  string imprimirColillaDePago(Fecha*, double p=0);
 	double getSalarioBruto(double regalia =0);
 	double getSalarioNeto(double);//hay que pasarle el salarioBruto
 	virtual const bool esPlanilla();
+	virtual const int calcularCesantia(Fecha*);
+	virtual const string cesarEmpleado(Fecha*);
 	virtual const string toString();
 	~Planilla();
 };

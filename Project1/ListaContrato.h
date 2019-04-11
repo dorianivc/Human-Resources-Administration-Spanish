@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include "NodoContrato.h"
+#include <fstream>
 using namespace std;
 class ListaContratos
 {private:
@@ -10,15 +11,17 @@ class ListaContratos
 	NodoContrato* actual;
 public:
 	ListaContratos();
+	void viajarEnElTiempo(Fecha*);
 	void insertar(Contrato*);
 	int cuentaNodos();
 	bool listaVacia();
 	void actualizarAhorros(int);
-	NodoContrato* getPosicion(int);
+	Contrato* getPosicion(string);
 	string toString();
-	void pagarSalarios(string);
+	string pagarSalarios(Fecha*);
+	string otorgarVacaciones(Fecha*, string);
 	bool eliminarIdentificador(string);
-	void pagarAguinaldos(Fecha*);
+	string pagarAguinaldos(Fecha*);
 
 	~ListaContratos();
 };

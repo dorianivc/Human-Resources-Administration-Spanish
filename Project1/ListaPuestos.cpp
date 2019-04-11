@@ -49,6 +49,22 @@ Puesto * ListaPuestos::getPosicion(int p)
 	}
 }
 
+Puesto * ListaPuestos::getPosicion(string cod)
+{
+	if (primero != NULL) {
+		actual = primero;
+		while (actual != NULL) {
+			if (actual->getInfo()->getCodigo() == cod) {
+				return actual->getInfo();
+			}
+			else {
+				actual = actual->getSiguiente();
+			}
+		} return NULL;
+	}
+	else return NULL;
+}
+
 string ListaPuestos::toString()
 {
 	if (listaVacia() != true) {
@@ -103,7 +119,7 @@ bool ListaPuestos::eliminarIdentificador(string cod)
 ListaPuestos::~ListaPuestos()
 {
 	actual = primero;
-	while (actual != NULL) {
+	while (primero!= NULL) {
 		actual = primero;
 		primero = primero->getSiguiente();
 		delete actual;

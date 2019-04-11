@@ -7,7 +7,8 @@
 using namespace std;
 class Empresa
 {
-	
+private:
+
 	string nombre;
 	string direccion;
 	string telefono;
