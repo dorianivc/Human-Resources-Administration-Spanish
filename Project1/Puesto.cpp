@@ -59,13 +59,13 @@ void Puesto::setSalarioBase(double newSalarioBase)
 	salarioBase = newSalarioBase;
 }
 
-const string Puesto::toString()
+string Puesto::toString()
 {
 	stringstream p;
 	p << "Nombre del Puesto: " << nombre << endl;
 	p << "Codigo del Puesto: " << codigo << endl;
 	p << "Descripcion del Puesto: " << descripcion << endl;
-	p << "Salario Base: " << (int)salarioBase << endl;
+	p << "Salario Base: " << salarioBase << endl;
 	return p.str();
 }
 
@@ -93,7 +93,7 @@ double Puesto::getDeducciones(double p)
 
 
 
-const string Puesto::identificador()
+string Puesto::identificador()
 {
 	return codigo;
 }

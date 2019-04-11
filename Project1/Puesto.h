@@ -22,9 +22,9 @@ public:
 	void setDescripcion(string);
 	double getSalarioBase();
 	void setSalarioBase(double);
-	virtual const string toString();
+	 string toString();
 	double getDeducciones(double p);
-	virtual const string identificador();
+	 string identificador();
 	double getSalarioDiario();
 	
 	~Puesto();

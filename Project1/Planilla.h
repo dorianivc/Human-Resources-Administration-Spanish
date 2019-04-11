@@ -30,7 +30,7 @@ public:
 	void setFechaUltimaVacaciones(Fecha*);//
 	void setUltimoPagoAguinaldo(Fecha*);//
 	double getDeducciones(double p); //Le paso el salario Bruto
-	string imprimirColillaDePago(Fecha*, double p=0);
+	virtual  string imprimirColillaDePago(string, double p=0);
 	double getSalarioBruto(double regalia =0);
 	double getSalarioNeto(double);//hay que pasarle el salarioBruto
 	virtual const bool esPlanilla();

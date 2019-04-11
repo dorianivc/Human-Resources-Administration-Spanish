@@ -12,7 +12,7 @@ public:
 	void insertar(Puesto*);
 	int cuentaNodos();
 	bool listaVacia();
-	NodoPuesto*  getPosicion(int);
+	Puesto*  getPosicion(int);
 	string toString();
 	bool eliminarIdentificador(string);
 	~ListaPuestos();

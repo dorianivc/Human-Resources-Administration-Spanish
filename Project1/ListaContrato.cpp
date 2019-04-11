@@ -81,6 +81,17 @@ string ListaContratos::toString()
 	else return "Lista Vacia";
 }
 
+void ListaContratos::pagarSalarios(string fechaActual)
+{
+	if (primero != NULL) {
+		actual = primero;
+		while (actual != NULL) {
+			actual->getInfo()->imprimirColillaDePago(fechaActual);
+			actual = actual->getSiguiente();
+		}
+	}
+}
+
 bool ListaContratos::eliminarIdentificador(string cod)
 {
 	actual = primero;

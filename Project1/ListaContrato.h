@@ -16,6 +16,7 @@ public:
 	void actualizarAhorros(int);
 	NodoContrato* getPosicion(int);
 	string toString();
+	void pagarSalarios(string);
 	bool eliminarIdentificador(string);
 	void pagarAguinaldos(Fecha*);
 

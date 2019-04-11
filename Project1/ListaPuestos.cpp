@@ -30,7 +30,7 @@ bool ListaPuestos::listaVacia()
 	return  (primero == NULL) ? true : false;
 }
 
-NodoPuesto * ListaPuestos::getPosicion(int p)
+Puesto * ListaPuestos::getPosicion(int p)
 {
 	actual = primero;
 	int can = 0;
@@ -40,7 +40,7 @@ NodoPuesto * ListaPuestos::getPosicion(int p)
 			can++;
 			actual = actual->getSiguiente();
 			if (p == can) {
-				return actual;
+				return actual->getInfo();
 			}
 		}
 	}

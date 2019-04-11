@@ -16,6 +16,7 @@ public:
 	virtual const void otorgarVacaciones(Fecha* p = NULL) {
 
 	}
+	virtual  string imprimirColillaDePago(string, double p = 0);
 	~ServiciosProfesionales();
 };
 

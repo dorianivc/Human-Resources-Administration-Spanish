@@ -133,11 +133,11 @@ double Planilla::getDeducciones(double p)
 	}
 }
 
-string Planilla::imprimirColillaDePago(Fecha * fechaPago, double p1)
+ string Planilla::imprimirColillaDePago(string  fechaPago, double p1)
 {
 	int limite = 1200000;
 	stringstream p;
-	p << "Colilla de Pago" << "     " << "Fecha: " << fechaPago->toStringFecha() << "    " << "Pago Correspondiente al Mes: " << fechaPago->getMes() << endl;
+	p << "Colilla de Pago" << "     " << "Fecha: " << fechaPago << "    " /*<< "Pago Correspondiente al Mes: " << fechaPago->getMes() */ << endl;
 	p << "Cedula: " << getEmpleado()->getCedula() << " " << "Nombre : " << getEmpleado()->getNombre() << " " << getEmpleado()->getApellidos() << endl;
 	p << "Codigo de Puesto: " << getPuesto()->getCodigo() << "-->" << getPuesto()->getNombre() << endl;
 	p << "Salario Bruto--> " <<(long) getSalarioBruto(p1) << endl;
@@ -155,8 +155,8 @@ string Planilla::imprimirColillaDePago(Fecha * fechaPago, double p1)
 	p << "Ahorros:" << endl;
 	p << "Ahorro Navidad: " << ahorroNavidad << endl;
 	p << "Ahorro Escolar: " << ahorroEscolar << endl;
-	p << "aguinaldo::::" << (long)calculcarAguinaldo(fechaPago) << endl;
-	p << "Dias de Vacaciones::: " << vacacionesAcumuladas(fechaPago) << endl;
+	//p << "aguinaldo::::" << (long)calculcarAguinaldo(fechaPago) << endl;
+	//p << "Dias de Vacaciones::: " << vacacionesAcumuladas(fechaPago) << endl;
 	p << "-----------FIN-----------" << endl;
 	return p.str();
 
@@ -192,6 +192,7 @@ const string Planilla::toString()
 	}
 	p << "Fecha de Inicio Contrato: " << getFechaToString() << endl;
 	p << getEmpleado()->toString();
+	p << puesto1->toString() << endl;
 	if (esTemporal) {
 		
 		p <<"Tipo de Empleado: " << "EMPLEADO TEMPORAL" << endl;
@@ -200,8 +201,7 @@ const string Planilla::toString()
 	else {
 		p << "Tipo de Empleado: " << "EMPLEADO EN PROPIEDAD" << endl;
 	}
-	p << getPuesto()->toString() << endl;
-
+	
 	return p.str();
 }
 

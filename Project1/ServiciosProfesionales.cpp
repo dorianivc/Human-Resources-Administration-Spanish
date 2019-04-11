@@ -31,6 +31,11 @@ const bool ServiciosProfesionales::pagarAhorro()
 
 
 
+ string ServiciosProfesionales::imprimirColillaDePago(string q, double p)
+{
+	return "REALIZAR COLILLA DE SERV PROFESIONALES";
+}
+
 ServiciosProfesionales::~ServiciosProfesionales()
 {
 }

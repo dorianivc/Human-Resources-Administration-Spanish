@@ -20,7 +20,8 @@ int main()
 
 	cout << "Bienvendo al sistema de gestion de Recursos Humanos" << endl;
 	//Creado las variables de empresa
-	Empresa* central = NULL;
+	Empresa* central=NULL;
+	Fecha* fechaEmpresa;
 	string nombreEmpresa, telefonoEmpresa, direccionEmpresa;
 	int dia, mes, ano;
 	bool exito = 0;
@@ -57,7 +58,8 @@ int main()
 				string excepcion = " Digito de annio Invalido ";
 				throw excepcion;
 			}
-			central = new Empresa(nombreEmpresa, direccionEmpresa, telefonoEmpresa, new Fecha(dia, mes, ano));
+			 fechaEmpresa = new Fecha(dia, mes, ano);
+			central = new Empresa(nombreEmpresa, direccionEmpresa, telefonoEmpresa, fechaEmpresa);
 			exito = 1;
 		}
 		catch (string excepcion) {
@@ -71,7 +73,7 @@ int main()
 		cout << central->toString() << endl;
 		system("pause");
 	}
-
+	string fechaCentral = central->fechaToString();
 	//---------------------FIN: Creacion de la empresa------------------------//
 
 	//--------------------Creacion de Menu Principal-------------------------//
@@ -88,7 +90,9 @@ int main()
 		cout << "(2) --> Eliminar Puesto" << endl;
 		cout << "(3) --> Contratar empleado a algun puesto disponible" << endl;
 		cout << "(4) --> toString()" << endl;
-		cout << "(5) --> SALIR" << endl;
+		cout << "(5) -->  Pagar Salarios" << endl;
+		cout << "(6) --> SALIR" << endl;
+
 		//--------------------FIN: Creacion de Menu Principal-------------------------//
 
 		//-------------------Iterador con Menu Principal-------------------------------//
@@ -184,17 +188,20 @@ int main()
 				system("cls");
 				cout << "Digite el numero de telefono del empleado" << endl;
 				getline(cin, telefonoEmpleado);
-				cin.ignore();
+				
 
 				do {
+					cin.ignore();
 					system("cls");
 					cout << "Es el puesto de : " << nombreEmpleado << " " << apellidoEmpleado << "  TEMPORAL?" << endl;
 					cout << "Digite 1 si es Temporal" << endl;
 					cout << "Digite 0 si es a Propiedad" << endl;
 					bool exito = 0;
 					try {
+						
 						cin >> esTemporal;
 						exito = 1;
+						
 					}
 					catch (string p) {
 						cout << "Error: TIPO DE DATO INGRESADO ES INVALIDO" << endl;
@@ -208,6 +215,7 @@ int main()
 				do {
 					bool exito = 0;
 					try {
+						cin.ignore();
 						cin >> subEleccion;
 						if (central->getListaPuestos()->getPosicion(subEleccion) == NULL)
 						{
@@ -219,18 +227,18 @@ int main()
 						cout << exepcion << endl;
 						system("pause");
 					}
-					puestoAux = central->getListaPuestos()->getPosicion(subEleccion)->getInfo();
+					puestoAux = central->getListaPuestos()->getPosicion(subEleccion);
+
 					exito = 1;
 				} while (exito != 1);
 				empleadoAux = new Empleado(nombreEmpleado, apellidoEmpleado, fechaNacimientoEmpleado, direccionEmpleado, direccionEmpleado, telefonoEmpleado);
 				cout << "Digite 1 si desea contratar por Planilla(Temporal o Propiedad)" << endl;
 				cout << "Digite 2 si desea contratar por servicios profesionales" << endl;
-				string nomPuesto = puestoAux->getNombre(), codPuesto = puestoAux->getCodigo(), desPuesto = puestoAux->getDescripcion();
-				double salPuesto= puestoAux->getSalarioBase();
+				
 				try {
+					cin.ignore();
 					cin >> eleccionSubMenuContratacion;
 					if (eleccionSubMenuContratacion == 1) {
-						puestoAux = new Puesto(nomPuesto, codPuesto, desPuesto, salPuesto);
 						central->getListaEmpleados()->insertar(new Planilla(central->getFechaActual(), empleadoAux,puestoAux , esTemporal));
 
 					}
@@ -291,10 +299,22 @@ int main()
 				}
 			}
 			else if (eleccionMenuPrincipal == 4) {
+				
 				cout << central->toString() << endl;
 				system("pause");
 			}
-			else if (eleccionMenuPrincipal == 5) {
+			else if(eleccionMenuPrincipal==5){
+				try {
+					central->getListaEmpleados()->pagarSalarios(fechaCentral);
+				}
+				catch (bad_alloc& e) {
+					cout << "Exepcion producida : " << e.what() << endl;
+					system("pause");
+				}
+			system("pause");
+
+			}
+			else if (eleccionMenuPrincipal == 6) {//salir
 				salirMenu = 1;
 			}
 			else {
