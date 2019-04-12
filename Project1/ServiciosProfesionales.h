@@ -14,6 +14,9 @@ public:
 	virtual const string  pagarAguinaldo(Fecha* p1 = NULL);
 	virtual const string otorgarVacaciones(Fecha* p1 = NULL);
 	virtual const string getSerializacion();
+	double getSalarioBruto(double);
+	virtual const void setAhorroEscolar(int);
+	virtual const void setAhorroNavidad(int);
 	virtual const int calcularCesantia(Fecha*);
 	virtual const void viajarEnElTiempo(Fecha*);
 	virtual const string cesarEmpleado(Fecha*);

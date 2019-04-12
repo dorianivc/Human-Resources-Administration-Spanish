@@ -45,27 +45,28 @@ void ListaContratos::insertar(Contrato * p)
 		if (p->esPlanilla()) {
 			ofstream listaEmpleados;
 			listaEmpleados.open("ListaEmpleadosPlanilla.txt", ios::app);
-			if (!listaEmpleados.bad() && listaEmpleados.fail()) {
+			if ( !listaEmpleados.fail()) {
 				listaEmpleados << p->getSerializacion();
-				listaEmpleados.close();
+				
 
 			}
 			else {
 				cout << "Error abriendo el archivo ListaEmpleadosPlanilla.txt" << endl;
 				system("pause");
 			}
-
+			listaEmpleados.close();
 		}
 		else {
 			ofstream listaServProf("ListaEmpleadosServiciosProfesionales.txt", ios::app);
-			if (!listaServProf.bad()) {
+			if (!listaServProf.fail()) {
 				listaServProf << p->getSerializacion();
-				listaServProf.close();
+				
 			}
 			else {
 				cout << "Error abriendo el archivo ListaEmpleadosServiciosProfesionales.txt " << endl;
 				system("pause");
 			}
+			listaServProf.close();
 		}
 	}
 	else {

@@ -19,6 +19,8 @@ private:
 	
 public:
 	Planilla(Fecha*, Empleado*, Puesto*, bool);
+	virtual const void setAhorroEscolar(int);
+	virtual const void setAhorroNavidad(int);
 	int vacacionesAcumuladas(Fecha*);
 	int getPorcentajeAhorroNavidad();
 	int getPorcentajeAhorroEscolar();

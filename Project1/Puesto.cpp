@@ -65,7 +65,7 @@ string Puesto::toString()
 	p << "Nombre del Puesto: " << nombre << endl;
 	p << "Codigo del Puesto: " << codigo << endl;
 	p << "Descripcion del Puesto: " << descripcion << endl;
-	p << "Salario Base: " << salarioBase << endl;
+	p << "Salario Base: " << (long)salarioBase << endl;
 	return p.str();
 }
 

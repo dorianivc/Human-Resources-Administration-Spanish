@@ -1,14 +1,15 @@
 Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
-Cedula: Dorian Nombre : Vallecillo 
-Codigo de Puesto: 45-->Labrador
-Salario Bruto--> 345000
+Cedula: 64750743 Nombre : DOrito 
+Codigo de Puesto: 45-->Puestito
+Salario Bruto--> 15440000
 Deducciones: 
-Carga Social (9%) ---> -31050
-Ahorro Obligatorio (2%) ---> -31050
+Carga Social (9%) ---> -1389600
+Ahorro Obligatorio (2%) ---> -308800
+Impuesto de la Renta(20%) ---> -2848000
 Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
 Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
-Total de Deducciones: -37950
-Salario Neto: 307050
+Total de Deducciones: -4546400
+Salario Neto: 10893600
 Ahorros:
 Ahorro Navidad: 0
 Ahorro Escolar: 0
@@ -16,333 +17,103 @@ aguinaldo::::0
 Dias de Vacaciones::: 0
 -----------FIN-----------
 
-
-Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
-Cedula: 604560224 Nombre : Jorge RT
-Codigo de Puesto: 45-->Labrador
-Salario Bruto--> 345000
-Deducciones: 
-Carga Social (9%) ---> -31050
-Ahorro Obligatorio (2%) ---> -31050
-Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
-Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
-Total de Deducciones: -37950
-Salario Neto: 307050
-Ahorros:
-Ahorro Navidad: 0
-Ahorro Escolar: 0
-aguinaldo::::0
-Dias de Vacaciones::: 0
------------FIN-----------
-
-Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
-Cedula: 604560223 Nombre : Dorian ROBERTO
-Codigo de Puesto: 45-->Labrador
-Salario Bruto--> 345000
-Deducciones: 
-Carga Social (9%) ---> -31050
-Ahorro Obligatorio (2%) ---> -31050
-Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
-Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
-Total de Deducciones: -37950
-Salario Neto: 307050
-Ahorros:
-Ahorro Navidad: 0
-Ahorro Escolar: 0
-aguinaldo::::0
-Dias de Vacaciones::: 0
------------FIN-----------
-
-
-Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
-Cedula: 604560224 Nombre : Jorge RT
-Codigo de Puesto: 45-->Labrador
-Salario Bruto--> 345000
-Deducciones: 
-Carga Social (9%) ---> -31050
-Ahorro Obligatorio (2%) ---> -31050
-Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
-Ahorro Escolar: 51750 Porcentaje de ahorro ----> 15
-Total de Deducciones: -5212950
-Salario Neto: -4867950
-Ahorros:
-Ahorro Navidad: 0
-Ahorro Escolar: 0
-aguinaldo::::0
-Dias de Vacaciones::: 0
------------FIN-----------
-
-Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
-Cedula: 604560223 Nombre : Dorian ROBERTO
-Codigo de Puesto: 45-->Labrador
-Salario Bruto--> 345000
-Deducciones: 
-Carga Social (9%) ---> -31050
-Ahorro Obligatorio (2%) ---> -31050
-Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
-Ahorro Escolar: 34500 Porcentaje de ahorro ----> 10
-Total de Deducciones: -3487950
-Salario Neto: -3142950
-Ahorros:
-Ahorro Navidad: 0
-Ahorro Escolar: 0
-aguinaldo::::0
-Dias de Vacaciones::: 0
------------FIN-----------
-
-
-Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
-Cedula: 604560224 Nombre : Jorge RT
-Codigo de Puesto: 45-->Labrador
-Salario Bruto--> 345000
-Deducciones: 
-Carga Social (9%) ---> -31050
-Ahorro Obligatorio (2%) ---> -31050
-Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
-Ahorro Escolar: 51750 Porcentaje de ahorro ----> 15
-Total de Deducciones: -5212950
-Salario Neto: -4867950
-Ahorros:
-Ahorro Navidad: 0
-Ahorro Escolar: 0
-aguinaldo::::0
-Dias de Vacaciones::: 0
------------FIN-----------
-
-Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
-Cedula: 604560223 Nombre : Dorian ROBERTO
-Codigo de Puesto: 45-->Labrador
-Salario Bruto--> 345000
-Deducciones: 
-Carga Social (9%) ---> -31050
-Ahorro Obligatorio (2%) ---> -31050
-Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
-Ahorro Escolar: 34500 Porcentaje de ahorro ----> 10
-Total de Deducciones: -3487950
-Salario Neto: -3142950
-Ahorros:
-Ahorro Navidad: 0
-Ahorro Escolar: 0
-aguinaldo::::0
-Dias de Vacaciones::: 0
------------FIN-----------
-
-
-Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
-Cedula: 604560224 Nombre : Jorge RT
-Codigo de Puesto: 45-->Labrador
-Salario Bruto--> 345000
-Deducciones: 
-Carga Social (9%) ---> -31050
-Ahorro Obligatorio (2%) ---> -31050
-Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
-Ahorro Escolar: 51750 Porcentaje de ahorro ----> 15
-Total de Deducciones: -5212950
-Salario Neto: -4867950
-Ahorros:
-Ahorro Navidad: 0
-Ahorro Escolar: 0
-aguinaldo::::0
-Dias de Vacaciones::: 0
------------FIN-----------
-
-Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
-Cedula: 604560223 Nombre : Dorian ROBERTO
-Codigo de Puesto: 45-->Labrador
-Salario Bruto--> 345000
-Deducciones: 
-Carga Social (9%) ---> -31050
-Ahorro Obligatorio (2%) ---> -31050
-Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
-Ahorro Escolar: 34500 Porcentaje de ahorro ----> 10
-Total de Deducciones: -3487950
-Salario Neto: -3142950
-Ahorros:
-Ahorro Navidad: 0
-Ahorro Escolar: 0
-aguinaldo::::0
-Dias de Vacaciones::: 0
------------FIN-----------
-
-
-Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
-Cedula: 604560224 Nombre : Jorge RT
-Codigo de Puesto: 45-->Labrador
-Salario Bruto--> 345000
-Deducciones: 
-Carga Social (9%) ---> -31050
-Ahorro Obligatorio (2%) ---> -31050
-Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
-Ahorro Escolar: 51750 Porcentaje de ahorro ----> 15
-Total de Deducciones: -5212950
-Salario Neto: -4867950
-Ahorros:
-Ahorro Navidad: 0
-Ahorro Escolar: 0
-aguinaldo::::0
-Dias de Vacaciones::: 0
------------FIN-----------
-
-Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
-Cedula: 604560223 Nombre : Dorian ROBERTO
-Codigo de Puesto: 45-->Labrador
-Salario Bruto--> 345000
-Deducciones: 
-Carga Social (9%) ---> -31050
-Ahorro Obligatorio (2%) ---> -31050
-Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
-Ahorro Escolar: 34500 Porcentaje de ahorro ----> 10
-Total de Deducciones: -3487950
-Salario Neto: -3142950
-Ahorros:
-Ahorro Navidad: 0
-Ahorro Escolar: 0
-aguinaldo::::0
-Dias de Vacaciones::: 0
------------FIN-----------
-
-
-Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
-Cedula: 604560224 Nombre : Jorge RT
-Codigo de Puesto: 45-->Labrador
-Salario Bruto--> 345000
-Deducciones: 
-Carga Social (9%) ---> -31050
-Ahorro Obligatorio (2%) ---> -31050
-Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
-Ahorro Escolar: 51750 Porcentaje de ahorro ----> 15
-Total de Deducciones: -5212950
-Salario Neto: -4867950
-Ahorros:
-Ahorro Navidad: 0
-Ahorro Escolar: 0
-aguinaldo::::0
-Dias de Vacaciones::: 0
------------FIN-----------
-
-Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
-Cedula: 604560223 Nombre : Dorian ROBERTO
-Codigo de Puesto: 45-->Labrador
-Salario Bruto--> 345000
-Deducciones: 
-Carga Social (9%) ---> -31050
-Ahorro Obligatorio (2%) ---> -31050
-Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
-Ahorro Escolar: 34500 Porcentaje de ahorro ----> 10
-Total de Deducciones: -3487950
-Salario Neto: -3142950
-Ahorros:
-Ahorro Navidad: 0
-Ahorro Escolar: 0
-aguinaldo::::0
-Dias de Vacaciones::: 0
------------FIN-----------
-
-
-Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
-Cedula: 6456 Nombre : Dr 
-Codigo de Puesto: 45-->Labrador
-Salario Bruto--> 345000
-Deducciones: 
-Carga Social (9%) ---> -31050
-Ahorro Obligatorio (2%) ---> -31050
-Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
-Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
-Total de Deducciones: -37950
-Salario Neto: 307050
-Ahorros:
-Ahorro Navidad: 0
-Ahorro Escolar: 0
-aguinaldo::::0
-Dias de Vacaciones::: 0
------------FIN-----------
-
-Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
-Cedula: 604560224 Nombre : Jorge RT
-Codigo de Puesto: 45-->Labrador
-Salario Bruto--> 345000
-Deducciones: 
-Carga Social (9%) ---> -31050
-Ahorro Obligatorio (2%) ---> -31050
-Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
-Ahorro Escolar: 51750 Porcentaje de ahorro ----> 15
-Total de Deducciones: -5212950
-Salario Neto: -4867950
-Ahorros:
-Ahorro Navidad: 0
-Ahorro Escolar: 0
-aguinaldo::::0
-Dias de Vacaciones::: 0
------------FIN-----------
-
-Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
-Cedula: 604560223 Nombre : Dorian ROBERTO
-Codigo de Puesto: 45-->Labrador
-Salario Bruto--> 345000
-Deducciones: 
-Carga Social (9%) ---> -31050
-Ahorro Obligatorio (2%) ---> -31050
-Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
-Ahorro Escolar: 34500 Porcentaje de ahorro ----> 10
-Total de Deducciones: -3487950
-Salario Neto: -3142950
-Ahorros:
-Ahorro Navidad: 0
-Ahorro Escolar: 0
-aguinaldo::::0
-Dias de Vacaciones::: 0
------------FIN-----------
-
-
-Colilla de Pago     Fecha: 1/1/2012    Pago Correspondiente al Mes: 1
-Cedula: 604560224 Nombre : Jorge RT
-Codigo de Puesto: 45-->Labrador
-Salario Bruto--> 345000
-Deducciones: 
-Carga Social (9%) ---> -31050
-Ahorro Obligatorio (2%) ---> -31050
-Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
-Ahorro Escolar: 51750 Porcentaje de ahorro ----> 15
-Total de Deducciones: -5212950
-Salario Neto: -4867950
-Ahorros:
-Ahorro Navidad: 0
-Ahorro Escolar: 6.88275e+06
-aguinaldo::::3849625
-Dias de Vacaciones::: 167
------------FIN-----------
-
-Colilla de Pago     Fecha: 1/1/2012    Pago Correspondiente al Mes: 1
-Cedula: 604560223 Nombre : Dorian ROBERTO
-Codigo de Puesto: 45-->Labrador
-Salario Bruto--> 345000
-Deducciones: 
-Carga Social (9%) ---> -31050
-Ahorro Obligatorio (2%) ---> -31050
-Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
-Ahorro Escolar: 34500 Porcentaje de ahorro ----> 10
-Total de Deducciones: -3487950
-Salario Neto: -3142950
-Ahorros:
-Ahorro Navidad: 0
-Ahorro Escolar: 4.5885e+06
-aguinaldo::::3849625
-Dias de Vacaciones::: 167
------------FIN-----------
 
 REALIZAR COLILLA DE SERV PROFESIONALES
-
 Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
-Cedula: 604560224 Nombre : Jorge RT
-Codigo de Puesto: 45-->Labrador
+Cedula: 64750743 Nombre : DOrito 
+Codigo de Puesto: 45-->Puestito
+Salario Bruto--> 15440000
+Deducciones: 
+Carga Social (9%) ---> -1389600
+Ahorro Obligatorio (2%) ---> -308800
+Impuesto de la Renta(20%) ---> -2848000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -4546400
+Salario Neto: 10893600
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+aguinaldo::::0
+Dias de Vacaciones::: 0
+-----------FIN-----------
+
+
+REALIZAR COLILLA DE SERV PROFESIONALES
+Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 64750743 Nombre : DOrito 
+Codigo de Puesto: 45-->Puestito
+Salario Bruto--> 15440000
+Deducciones: 
+Carga Social (9%) ---> -1389600
+Ahorro Obligatorio (2%) ---> -308800
+Impuesto de la Renta(20%) ---> -2848000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -4546400
+Salario Neto: 10893600
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+aguinaldo::::0
+Dias de Vacaciones::: 0
+-----------FIN-----------
+
+
+REALIZAR COLILLA DE SERV PROFESIONALES
+Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 64750743 Nombre : DOrito 
+Codigo de Puesto: 45-->Puestito
+Salario Bruto--> 15440000
+Deducciones: 
+Carga Social (9%) ---> -1389600
+Ahorro Obligatorio (2%) ---> -308800
+Impuesto de la Renta(20%) ---> -2848000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -4546400
+Salario Neto: 10893600
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+aguinaldo::::0
+Dias de Vacaciones::: 0
+-----------FIN-----------
+
+
+REALIZAR COLILLA DE SERV PROFESIONALES
+Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 64750743 Nombre : DOrito 
+Codigo de Puesto: 45-->Puestito
+Salario Bruto--> 15440000
+Deducciones: 
+Carga Social (9%) ---> -1389600
+Ahorro Obligatorio (2%) ---> -308800
+Impuesto de la Renta(20%) ---> -2848000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -4546400
+Salario Neto: 10893600
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+aguinaldo::::0
+Dias de Vacaciones::: 0
+-----------FIN-----------
+
+
+REALIZAR COLILLA DE SERV PROFESIONALES
+Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 45 Nombre : Flashback 
+Codigo de Puesto: 345-->Dormir
 Salario Bruto--> 345000
 Deducciones: 
 Carga Social (9%) ---> -31050
 Ahorro Obligatorio (2%) ---> -6900
 Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
-Ahorro Escolar: 51750 Porcentaje de ahorro ----> 15
-Total de Deducciones: -5212950
-Salario Neto: -4867950
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -37950
+Salario Neto: 307050
 Ahorros:
 Ahorro Navidad: 0
 Ahorro Escolar: 0
@@ -351,16 +122,17 @@ Dias de Vacaciones::: 0
 -----------FIN-----------
 
 Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
-Cedula: 604560223 Nombre : Dorian ROBERTO
-Codigo de Puesto: 45-->Labrador
-Salario Bruto--> 345000
+Cedula: 484544312 Nombre : Roberto Fernandez
+Codigo de Puesto: 777-->777
+Salario Bruto--> 1450000
 Deducciones: 
-Carga Social (9%) ---> -31050
-Ahorro Obligatorio (2%) ---> -6900
+Carga Social (9%) ---> -130500
+Ahorro Obligatorio (2%) ---> -29000
+Impuesto de la Renta(20%) ---> -50000
 Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
-Ahorro Escolar: 34500 Porcentaje de ahorro ----> 10
-Total de Deducciones: -3487950
-Salario Neto: -3142950
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -209500
+Salario Neto: 1240500
 Ahorros:
 Ahorro Navidad: 0
 Ahorro Escolar: 0
@@ -369,10 +141,653 @@ Dias de Vacaciones::: 0
 -----------FIN-----------
 
 REALIZAR COLILLA DE SERV PROFESIONALES
+Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 64750743 Nombre : DOrito 
+Codigo de Puesto: 45-->Puestito
+Salario Bruto--> 15440000
+Deducciones: 
+Carga Social (9%) ---> -1389600
+Ahorro Obligatorio (2%) ---> -308800
+Impuesto de la Renta(20%) ---> -2848000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -4546400
+Salario Neto: 10893600
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+aguinaldo::::0
+Dias de Vacaciones::: 0
+-----------FIN-----------
+
+
+
+REALIZAR COLILLA DE SERV PROFESIONALES
+REALIZAR COLILLA DE SERV PROFESIONALES
+Colilla de Pago     Fecha: 1/1/3000    Pago Correspondiente al Mes: 1
+Cedula: 45 Nombre : Flashback 
+Codigo de Puesto: 345-->Dormir
+Salario Bruto--> 345000
+Deducciones: 
+Carga Social (9%) ---> -31050
+Ahorro Obligatorio (2%) ---> -6900
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -37950
+Salario Neto: 307050
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+aguinaldo::::-2147483648
+Dias de Vacaciones::: 178955935
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/3000    Pago Correspondiente al Mes: 1
+Cedula: 484544312 Nombre : Roberto Fernandez
+Codigo de Puesto: 777-->777
+Salario Bruto--> 1450000
+Deducciones: 
+Carga Social (9%) ---> -130500
+Ahorro Obligatorio (2%) ---> -29000
+Impuesto de la Renta(20%) ---> -50000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -209500
+Salario Neto: 1240500
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+aguinaldo::::-2147483648
+Dias de Vacaciones::: 178955935
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/3000    Pago Correspondiente al Mes: 1
+Cedula: 64750743 Nombre : DOrito 
+Codigo de Puesto: 45-->Puestito
+Salario Bruto--> 15440000
+Deducciones: 
+Carga Social (9%) ---> -1389600
+Ahorro Obligatorio (2%) ---> -308800
+Impuesto de la Renta(20%) ---> -2848000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -4546400
+Salario Neto: 10893600
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+aguinaldo::::-2147483648
+Dias de Vacaciones::: 178955935
+-----------FIN-----------
+
+
+REALIZAR COLILLA DE SERV PROFESIONALES
+REALIZAR COLILLA DE SERV PROFESIONALES
+Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 45 Nombre : Flashback 
+Codigo de Puesto: 345-->Dormir
+Salario Bruto--> 345000
+Deducciones: 
+Carga Social (9%) ---> -31050
+Ahorro Obligatorio (2%) ---> -6900
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -37950
+Salario Neto: 307050
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+aguinaldo::::0
+Dias de Vacaciones::: 0
+-----------FIN-----------
 
 Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
-Cedula: 604560224 Nombre : Jorge RT
-Codigo de Puesto: 45-->Labrador
+Cedula: 484544312 Nombre : Roberto Fernandez
+Codigo de Puesto: 777-->777
+Salario Bruto--> 1450000
+Deducciones: 
+Carga Social (9%) ---> -130500
+Ahorro Obligatorio (2%) ---> -29000
+Impuesto de la Renta(20%) ---> -50000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -209500
+Salario Neto: 1240500
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+aguinaldo::::0
+Dias de Vacaciones::: 0
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 64750743 Nombre : DOrito 
+Codigo de Puesto: 45-->Puestito
+Salario Bruto--> 15440000
+Deducciones: 
+Carga Social (9%) ---> -1389600
+Ahorro Obligatorio (2%) ---> -308800
+Impuesto de la Renta(20%) ---> -2848000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -4546400
+Salario Neto: 10893600
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+aguinaldo::::0
+Dias de Vacaciones::: 0
+-----------FIN-----------
+
+
+REALIZAR COLILLA DE SERV PROFESIONALES
+REALIZAR COLILLA DE SERV PROFESIONALES
+Colilla de Pago     Fecha: 1/1/2002    Pago Correspondiente al Mes: 1
+Cedula: 45 Nombre : Flashback 
+Codigo de Puesto: 345-->Dormir
+Salario Bruto--> 345000
+Deducciones: 
+Carga Social (9%) ---> -31050
+Ahorro Obligatorio (2%) ---> -6900
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -37950
+Salario Neto: 307050
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+aguinaldo::::349791
+Dias de Vacaciones::: 15
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2002    Pago Correspondiente al Mes: 1
+Cedula: 484544312 Nombre : Roberto Fernandez
+Codigo de Puesto: 777-->777
+Salario Bruto--> 1450000
+Deducciones: 
+Carga Social (9%) ---> -130500
+Ahorro Obligatorio (2%) ---> -29000
+Impuesto de la Renta(20%) ---> -50000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -209500
+Salario Neto: 1240500
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+aguinaldo::::1470138
+Dias de Vacaciones::: 15
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2002    Pago Correspondiente al Mes: 1
+Cedula: 64750743 Nombre : DOrito 
+Codigo de Puesto: 45-->Puestito
+Salario Bruto--> 15440000
+Deducciones: 
+Carga Social (9%) ---> -1389600
+Ahorro Obligatorio (2%) ---> -308800
+Impuesto de la Renta(20%) ---> -2848000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -4546400
+Salario Neto: 10893600
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+aguinaldo::::15654444
+Dias de Vacaciones::: 15
+-----------FIN-----------
+
+
+REALIZAR COLILLA DE SERV PROFESIONALES
+REALIZAR COLILLA DE SERV PROFESIONALES
+Colilla de Pago     Fecha: 1/1/2002    Pago Correspondiente al Mes: 1
+Cedula: 45 Nombre : Flashback 
+Codigo de Puesto: 345-->Dormir
+Salario Bruto--> 345000
+Deducciones: 
+Carga Social (9%) ---> -31050
+Ahorro Obligatorio (2%) ---> -6900
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -37950
+Salario Neto: 307050
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+aguinaldo::::349791
+Dias de Vacaciones::: 15
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2002    Pago Correspondiente al Mes: 1
+Cedula: 484544312 Nombre : Roberto Fernandez
+Codigo de Puesto: 777-->777
+Salario Bruto--> 1450000
+Deducciones: 
+Carga Social (9%) ---> -130500
+Ahorro Obligatorio (2%) ---> -29000
+Impuesto de la Renta(20%) ---> -50000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -209500
+Salario Neto: 1240500
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+aguinaldo::::1470138
+Dias de Vacaciones::: 15
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2002    Pago Correspondiente al Mes: 1
+Cedula: 64750743 Nombre : DOrito 
+Codigo de Puesto: 45-->Puestito
+Salario Bruto--> 15440000
+Deducciones: 
+Carga Social (9%) ---> -1389600
+Ahorro Obligatorio (2%) ---> -308800
+Impuesto de la Renta(20%) ---> -2848000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -4546400
+Salario Neto: 10893600
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+aguinaldo::::15654444
+Dias de Vacaciones::: 15
+-----------FIN-----------
+
+
+REALIZAR COLILLA DE SERV PROFESIONALES
+REALIZAR COLILLA DE SERV PROFESIONALES
+Colilla de Pago     Fecha: 1/1/2002    Pago Correspondiente al Mes: 1
+Cedula: 45 Nombre : Flashback 
+Codigo de Puesto: 345-->Dormir
+Salario Bruto--> 345000
+Deducciones: 
+Carga Social (9%) ---> -31050
+Ahorro Obligatorio (2%) ---> -6900
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -37950
+Salario Neto: 307050
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+aguinaldo::::0
+Dias de Vacaciones::: 15
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2002    Pago Correspondiente al Mes: 1
+Cedula: 484544312 Nombre : Roberto Fernandez
+Codigo de Puesto: 777-->777
+Salario Bruto--> 1450000
+Deducciones: 
+Carga Social (9%) ---> -130500
+Ahorro Obligatorio (2%) ---> -29000
+Impuesto de la Renta(20%) ---> -50000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -209500
+Salario Neto: 1240500
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+aguinaldo::::0
+Dias de Vacaciones::: 15
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2002    Pago Correspondiente al Mes: 1
+Cedula: 64750743 Nombre : DOrito 
+Codigo de Puesto: 45-->Puestito
+Salario Bruto--> 15440000
+Deducciones: 
+Carga Social (9%) ---> -1389600
+Ahorro Obligatorio (2%) ---> -308800
+Impuesto de la Renta(20%) ---> -2848000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -4546400
+Salario Neto: 10893600
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+aguinaldo::::0
+Dias de Vacaciones::: 15
+-----------FIN-----------
+
+
+REALIZAR COLILLA DE SERV PROFESIONALES
+REALIZAR COLILLA DE SERV PROFESIONALES
+Colilla de Pago     Fecha: 1/1/2002    Pago Correspondiente al Mes: 1
+Cedula: 45 Nombre : Flashback 
+Codigo de Puesto: 345-->Dormir
+Salario Bruto--> 345000
+Deducciones: 
+Carga Social (9%) ---> -31050
+Ahorro Obligatorio (2%) ---> -6900
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -37950
+Salario Neto: 307050
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+Aguinaldo acumulado a la fecha 349791
+Dias de Vacaciones::: 15
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2002    Pago Correspondiente al Mes: 1
+Cedula: 484544312 Nombre : Roberto Fernandez
+Codigo de Puesto: 777-->777
+Salario Bruto--> 1450000
+Deducciones: 
+Carga Social (9%) ---> -130500
+Ahorro Obligatorio (2%) ---> -29000
+Impuesto de la Renta(20%) ---> -50000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -209500
+Salario Neto: 1240500
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+Aguinaldo acumulado a la fecha 1470138
+Dias de Vacaciones::: 15
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2002    Pago Correspondiente al Mes: 1
+Cedula: 64750743 Nombre : DOrito 
+Codigo de Puesto: 45-->Puestito
+Salario Bruto--> 15440000
+Deducciones: 
+Carga Social (9%) ---> -1389600
+Ahorro Obligatorio (2%) ---> -308800
+Impuesto de la Renta(20%) ---> -2848000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -4546400
+Salario Neto: 10893600
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+Aguinaldo acumulado a la fecha 15654444
+Dias de Vacaciones::: 15
+-----------FIN-----------
+
+
+REALIZAR COLILLA DE SERV PROFESIONALES
+REALIZAR COLILLA DE SERV PROFESIONALES
+Colilla de Pago     Fecha: 1/1/2002    Pago Correspondiente al Mes: 1
+Cedula: 45 Nombre : Flashback 
+Codigo de Puesto: 345-->Dormir
+Salario Bruto--> 345000
+Deducciones: 
+Carga Social (9%) ---> -31050
+Ahorro Obligatorio (2%) ---> -6900
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -37950
+Salario Neto: 307050
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+Aguinaldo acumulado a la fecha 349791
+Dias de Vacaciones::: 15
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2002    Pago Correspondiente al Mes: 1
+Cedula: 484544312 Nombre : Roberto Fernandez
+Codigo de Puesto: 777-->777
+Salario Bruto--> 1450000
+Deducciones: 
+Carga Social (9%) ---> -130500
+Ahorro Obligatorio (2%) ---> -29000
+Impuesto de la Renta(20%) ---> -50000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -209500
+Salario Neto: 1240500
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+Aguinaldo acumulado a la fecha 1470138
+Dias de Vacaciones::: 15
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2002    Pago Correspondiente al Mes: 1
+Cedula: 64750743 Nombre : DOrito 
+Codigo de Puesto: 45-->Puestito
+Salario Bruto--> 15440000
+Deducciones: 
+Carga Social (9%) ---> -1389600
+Ahorro Obligatorio (2%) ---> -308800
+Impuesto de la Renta(20%) ---> -2848000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -4546400
+Salario Neto: 10893600
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+Aguinaldo acumulado a la fecha 15654444
+Dias de Vacaciones::: 15
+-----------FIN-----------
+
+
+REALIZAR COLILLA DE SERV PROFESIONALES
+REALIZAR COLILLA DE SERV PROFESIONALES
+Colilla de Pago     Fecha: 1/1/2002    Pago Correspondiente al Mes: 1
+Cedula: 45 Nombre : Flashback 
+Codigo de Puesto: 345-->Dormir
+Salario Bruto--> 345000
+Deducciones: 
+Carga Social (9%) ---> -31050
+Ahorro Obligatorio (2%) ---> -6900
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -37950
+Salario Neto: 307050
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+Aguinaldo acumulado a la fecha: 349791
+Dias de Vacaciones::: 15
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2002    Pago Correspondiente al Mes: 1
+Cedula: 484544312 Nombre : Roberto Fernandez
+Codigo de Puesto: 777-->777
+Salario Bruto--> 1450000
+Deducciones: 
+Carga Social (9%) ---> -130500
+Ahorro Obligatorio (2%) ---> -29000
+Impuesto de la Renta(20%) ---> -50000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -209500
+Salario Neto: 1240500
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+Aguinaldo acumulado a la fecha: 1470138
+Dias de Vacaciones::: 15
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2002    Pago Correspondiente al Mes: 1
+Cedula: 64750743 Nombre : DOrito 
+Codigo de Puesto: 45-->Puestito
+Salario Bruto--> 15440000
+Deducciones: 
+Carga Social (9%) ---> -1389600
+Ahorro Obligatorio (2%) ---> -308800
+Impuesto de la Renta(20%) ---> -2848000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -4546400
+Salario Neto: 10893600
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+Aguinaldo acumulado a la fecha: 15654444
+Dias de Vacaciones::: 15
+-----------FIN-----------
+
+
+REALIZAR COLILLA DE SERV PROFESIONALES
+REALIZAR COLILLA DE SERV PROFESIONALES
+Colilla de Pago     Fecha: 1/1/2002    Pago Correspondiente al Mes: 1
+Cedula: 45 Nombre : Flashback 
+Codigo de Puesto: 345-->Dormir
+Salario Bruto--> 345000
+Deducciones: 
+Carga Social (9%) ---> -31050
+Ahorro Obligatorio (2%) ---> -6900
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -37950
+Salario Neto: 307050
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+Aguinaldo acumulado a la fecha: 349791
+Dias de Vacaciones::: 0
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2002    Pago Correspondiente al Mes: 1
+Cedula: 484544312 Nombre : Roberto Fernandez
+Codigo de Puesto: 777-->777
+Salario Bruto--> 1450000
+Deducciones: 
+Carga Social (9%) ---> -130500
+Ahorro Obligatorio (2%) ---> -29000
+Impuesto de la Renta(20%) ---> -50000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -209500
+Salario Neto: 1240500
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+Aguinaldo acumulado a la fecha: 1470138
+Dias de Vacaciones::: 15
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2002    Pago Correspondiente al Mes: 1
+Cedula: 64750743 Nombre : DOrito 
+Codigo de Puesto: 45-->Puestito
+Salario Bruto--> 15440000
+Deducciones: 
+Carga Social (9%) ---> -1389600
+Ahorro Obligatorio (2%) ---> -308800
+Impuesto de la Renta(20%) ---> -2848000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -4546400
+Salario Neto: 10893600
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+Aguinaldo acumulado a la fecha: 15654444
+Dias de Vacaciones::: 15
+-----------FIN-----------
+
+
+Colilla de Pago POR SERVICIOS PROFESIONALES     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 45578454 Nombre : GVghca 
+Codigo de Puesto: 778-->Ingeniero
+Salario Bruto--> 14500000
+Deducciones: 
+Carga Social (9%) ---> -1305000
+Ahorro Obligatorio (2%) ---> -290000
+Impuesto de la Renta(20%) ---> -2660000
+Aguinaldo acumulado a la fecha: 0
+-----------FIN-----------
+
+Colilla de Pago POR SERVICIOS PROFESIONALES     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 78454 Nombre : Dfscs 
+Codigo de Puesto: 78-->fr
+Salario Bruto--> 450000
+Deducciones: 
+Carga Social (9%) ---> -40500
+Ahorro Obligatorio (2%) ---> -9000
+Aguinaldo acumulado a la fecha: 0
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 45 Nombre : Flashback 
+Codigo de Puesto: 345-->Dormir
+Salario Bruto--> 345000
+Deducciones: 
+Carga Social (9%) ---> -31050
+Ahorro Obligatorio (2%) ---> -6900
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -37950
+Salario Neto: 307050
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+Aguinaldo acumulado a la fecha: 0
+Dias de Vacaciones::: 0
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 484544312 Nombre : Roberto Fernandez
+Codigo de Puesto: 777-->777
+Salario Bruto--> 1450000
+Deducciones: 
+Carga Social (9%) ---> -130500
+Ahorro Obligatorio (2%) ---> -29000
+Impuesto de la Renta(20%) ---> -50000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -209500
+Salario Neto: 1240500
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+Aguinaldo acumulado a la fecha: 0
+Dias de Vacaciones::: 0
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 64750743 Nombre : DOrito 
+Codigo de Puesto: 45-->Puestito
+Salario Bruto--> 15440000
+Deducciones: 
+Carga Social (9%) ---> -1389600
+Ahorro Obligatorio (2%) ---> -308800
+Impuesto de la Renta(20%) ---> -2848000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -4546400
+Salario Neto: 10893600
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+Aguinaldo acumulado a la fecha: 0
+Dias de Vacaciones::: 0
+-----------FIN-----------
+
+
+Colilla de Pago POR SERVICIOS PROFESIONALES     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 45578454 Nombre : GVghca 
+Codigo de Puesto: 778-->Ingeniero
+Salario Bruto--> 14500000
+Dias de cesantia acumuladas: 0
+-----------FIN-----------
+
+Colilla de Pago POR SERVICIOS PROFESIONALES     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 78454 Nombre : Dfscs 
+Codigo de Puesto: 78-->fr
+Salario Bruto--> 450000
+Dias de cesantia acumuladas: 0
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 45 Nombre : Flashback 
+Codigo de Puesto: 345-->Dormir
 Salario Bruto--> 345000
 Deducciones: 
 Carga Social (9%) ---> -31050
@@ -384,27 +799,188 @@ Salario Neto: 255300
 Ahorros:
 Ahorro Navidad: 0
 Ahorro Escolar: 0
-aguinaldo::::0
+Aguinaldo acumulado a la fecha: 0
 Dias de Vacaciones::: 0
 -----------FIN-----------
 
 Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
-Cedula: 604560223 Nombre : Dorian ROBERTO
-Codigo de Puesto: 45-->Labrador
+Cedula: 484544312 Nombre : Roberto Fernandez
+Codigo de Puesto: 777-->777
+Salario Bruto--> 1450000
+Deducciones: 
+Carga Social (9%) ---> -130500
+Ahorro Obligatorio (2%) ---> -29000
+Impuesto de la Renta(20%) ---> -50000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -209500
+Salario Neto: 1240500
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+Aguinaldo acumulado a la fecha: 0
+Dias de Vacaciones::: 0
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 64750743 Nombre : DOrito 
+Codigo de Puesto: 45-->Puestito
+Salario Bruto--> 15440000
+Deducciones: 
+Carga Social (9%) ---> -1389600
+Ahorro Obligatorio (2%) ---> -308800
+Impuesto de la Renta(20%) ---> -2848000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -4546400
+Salario Neto: 10893600
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+Aguinaldo acumulado a la fecha: 0
+Dias de Vacaciones::: 0
+-----------FIN-----------
+
+
+Colilla de Pago POR SERVICIOS PROFESIONALES     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 45578454 Nombre : GVghca 
+Codigo de Puesto: 778-->Ingeniero
+Salario Bruto--> 14500000
+Dias de cesantia acumuladas: 0
+-----------FIN-----------
+
+Colilla de Pago POR SERVICIOS PROFESIONALES     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 78454 Nombre : Dfscs 
+Codigo de Puesto: 78-->fr
+Salario Bruto--> 450000
+Dias de cesantia acumuladas: 0
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 45 Nombre : Flashback 
+Codigo de Puesto: 345-->Dormir
 Salario Bruto--> 345000
 Deducciones: 
 Carga Social (9%) ---> -31050
 Ahorro Obligatorio (2%) ---> -6900
 Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
-Ahorro Escolar: 34500 Porcentaje de ahorro ----> 10
-Total de Deducciones: -72450
-Salario Neto: 272550
+Ahorro Escolar: 51750 Porcentaje de ahorro ----> 15
+Total de Deducciones: -89700
+Salario Neto: 255300
 Ahorros:
 Ahorro Navidad: 0
 Ahorro Escolar: 0
-aguinaldo::::0
+Aguinaldo acumulado a la fecha: 0
 Dias de Vacaciones::: 0
 -----------FIN-----------
 
-REALIZAR COLILLA DE SERV PROFESIONALES
+Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 484544312 Nombre : Roberto Fernandez
+Codigo de Puesto: 777-->777
+Salario Bruto--> 1450000
+Deducciones: 
+Carga Social (9%) ---> -130500
+Ahorro Obligatorio (2%) ---> -29000
+Impuesto de la Renta(20%) ---> -50000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -209500
+Salario Neto: 1240500
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+Aguinaldo acumulado a la fecha: 0
+Dias de Vacaciones::: 0
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 64750743 Nombre : DOrito 
+Codigo de Puesto: 45-->Puestito
+Salario Bruto--> 15440000
+Deducciones: 
+Carga Social (9%) ---> -1389600
+Ahorro Obligatorio (2%) ---> -308800
+Impuesto de la Renta(20%) ---> -2848000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -4546400
+Salario Neto: 10893600
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+Aguinaldo acumulado a la fecha: 0
+Dias de Vacaciones::: 0
+-----------FIN-----------
+
+
+Colilla de Pago POR SERVICIOS PROFESIONALES     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 45578454 Nombre : GVghca 
+Codigo de Puesto: 778-->Ingeniero
+Salario Bruto--> 14500000
+Dias de cesantia acumuladas: 0
+-----------FIN-----------
+
+Colilla de Pago POR SERVICIOS PROFESIONALES     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 78454 Nombre : Dfscs 
+Codigo de Puesto: 78-->fr
+Salario Bruto--> 450000
+Dias de cesantia acumuladas: 0
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 45 Nombre : Flashback 
+Codigo de Puesto: 345-->Dormir
+Salario Bruto--> 345000
+Deducciones: 
+Carga Social (9%) ---> -31050
+Ahorro Obligatorio (2%) ---> -6900
+Ahorro Navidad: 17250 Porcentaje de ahorro ---> 5
+Ahorro Escolar: 51750 Porcentaje de ahorro ----> 15
+Total de Deducciones: -106950
+Salario Neto: 238050
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+Aguinaldo acumulado a la fecha: 0
+Dias de Vacaciones::: 0
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 484544312 Nombre : Roberto Fernandez
+Codigo de Puesto: 777-->777
+Salario Bruto--> 1450000
+Deducciones: 
+Carga Social (9%) ---> -130500
+Ahorro Obligatorio (2%) ---> -29000
+Impuesto de la Renta(20%) ---> -50000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -209500
+Salario Neto: 1240500
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+Aguinaldo acumulado a la fecha: 0
+Dias de Vacaciones::: 0
+-----------FIN-----------
+
+Colilla de Pago     Fecha: 1/1/2001    Pago Correspondiente al Mes: 1
+Cedula: 64750743 Nombre : DOrito 
+Codigo de Puesto: 45-->Puestito
+Salario Bruto--> 15440000
+Deducciones: 
+Carga Social (9%) ---> -1389600
+Ahorro Obligatorio (2%) ---> -308800
+Impuesto de la Renta(20%) ---> -2848000
+Ahorro Navidad: 0 Porcentaje de ahorro ---> 0
+Ahorro Escolar: 0 Porcentaje de ahorro ----> 0
+Total de Deducciones: -4546400
+Salario Neto: 10893600
+Ahorros:
+Ahorro Navidad: 0
+Ahorro Escolar: 0
+Aguinaldo acumulado a la fecha: 0
+Dias de Vacaciones::: 0
+-----------FIN-----------
+
 

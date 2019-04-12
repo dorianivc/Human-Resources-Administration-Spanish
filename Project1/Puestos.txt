@@ -1,1 +1,1 @@
-Labrador,45, ,345000;Labrador,45, ,345000;Labrador,45, ,345000;Labrador,45, ,345000;Loquera,777,nada,,46000;Loquera,777,nada,,46000;Loquera,777,nada,,46000;Loquera,777,nada,,46000;Loquera,777,nada,,46000;Loquera,777,nada,,46000;Loquera,777,nada,,46000;Loquera,777,nada,,46000;Loquera,777,nada,,46000;Loquera,777,nada,,46000;Loquera,777,nada,,46000;Loquera,777,nada,,46000;Lloron,988,,456000;33,777,Mamar,456000;
+Dormir,345,sleep,345000;Ingeniero,778,Lk,1.45e+07;Dorrmr,32,cs,450000;777,777,dormir,1.45e+06;Puestito,45,,1.544e+07;fr,78,45,450000;

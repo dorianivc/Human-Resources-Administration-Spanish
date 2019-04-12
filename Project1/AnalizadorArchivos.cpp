@@ -18,6 +18,7 @@ void AnalizadorArchivos::ingresarPuestos(ListaPuestos * lista)
 			conversionCodigo = atoi(codigo.c_str());
 			getline(puestos, descripcion, ',');
 			getline(puestos, salarioBase, ';');
+			conversionSalarioBase = atof(salarioBase.c_str());
 			if (codigo.length() > 1&& lista->existePosicion(conversionCodigo)!=true) {
 				lista->insertarSinRegistrar(new Puesto(nombre, conversionCodigo, descripcion, conversionSalarioBase));
 			}
@@ -92,8 +93,8 @@ void AnalizadorArchivos::ingresarEmpleados(ListaContratos * lista, ListaPuestos*
 		cout << "ERROR AL CARGAR EL ARCHIVO ListaEmpleadosPlanilla.txt: ARCHIVO NO EXISTE O EN MAL ESTADO "<< endl;
 		
 	}
-	planilla.close();
-	cout << "archivo cerrado" << endl;
+	
+	
 	//----------------------------SERVICIOS PROFESIONALES------------------------------------------//
 
 	ifstream profesionales; 
@@ -144,13 +145,15 @@ void AnalizadorArchivos::ingresarEmpleados(ListaContratos * lista, ListaPuestos*
 				}
 			}
 		}
-		profesionales.close();
+		
 		
 	}
 	else {
 		cout << "Error al abrir el archivo: ListaEmpleadosServiciosProfesionales.txt : NO EXISTE O EN MAL ESTADO" << endl;
 	}
+
 	profesionales.close();
+	planilla.close();
 	system("pause");
 }
 

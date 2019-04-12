@@ -19,7 +19,9 @@ public:
 	virtual const void viajarEnElTiempo(Fecha*)=0;
 	void setEmpleado(Empleado*);
 	Puesto* getPuesto();
-	virtual const string getSerializacion() = 0;;
+	virtual const string getSerializacion() = 0;
+	virtual const void setAhorroEscolar(int) = 0;
+	virtual const void setAhorroNavidad(int) = 0;
 	void setPuesto(Puesto*);
 	string getFechaToString();
 	Fecha* getFecha();

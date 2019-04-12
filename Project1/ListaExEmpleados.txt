@@ -1,0 +1,40 @@
+Cesando empleado: 
+Fecha de cesantia aplicada: 1/1/2007
+CONTRATO POR SERVICIOS PROFESIONALES
+Fecha de Inicio Contrato: 1/1/2001
+Fecha de Cesantia: 1/1/2003
+Cedula: 45578454            Nombre:  GVghca     Apellidos: 
+Fecha de Nacimiento:  Direccion:  Numero de Telefono: 
+
+Nombre del Puesto: Ingeniero
+Codigo del Puesto: 778
+Descripcion del Puesto: Lk
+Salario Base: 14500000
+
+Empleado activo: SI
+
+Dias a pagar por cesantia (Garantia de Ley) : 182
+Monto a pagar por censantia: 87966666
+Monto a cancelar de aguinaldo: 88248611
+Total a Cancelar por la empresa: 176215277
+
+Cesando empleado: 
+Fecha de cesantia aplicada: 1/1/2007
+CONTRATO POR SERVICIOS PROFESIONALES
+Fecha de Inicio Contrato: 1/1/2001
+Fecha de Cesantia: 1/1/2005
+Cedula: 78454            Nombre:  Dfscs     Apellidos: 
+Fecha de Nacimiento:  Direccion: scds Numero de Telefono: dcs
+
+Nombre del Puesto: fr
+Codigo del Puesto: 78
+Descripcion del Puesto: 45
+Salario Base: 450000
+
+Empleado activo: SI
+
+Dias a pagar por cesantia (Garantia de Ley) : 182
+Monto a pagar por censantia: 2730000
+Monto a cancelar de aguinaldo: 2738750
+Total a Cancelar por la empresa: 5468750
+

@@ -63,6 +63,20 @@ const string ServiciosProfesionales::getSerializacion()
 	return p.str();
 }
 
+double ServiciosProfesionales::getSalarioBruto(double p)
+{
+	return (getPuesto()->getSalarioBase() + p);
+}
+
+const void ServiciosProfesionales::setAhorroEscolar(int)
+{
+	
+}
+
+const void ServiciosProfesionales::setAhorroNavidad(int)
+{
+}
+
 const int ServiciosProfesionales::calcularCesantia(Fecha * fechaACalcular)
 {
 	int dias = getFecha()->Distancia(getFecha(), fechaACalcular);
@@ -98,14 +112,22 @@ const string ServiciosProfesionales::cesarEmpleado(Fecha * fechaACesar)
 	p << "Fecha de cesantia aplicada: " << fechaACesar->toStringFecha() << endl;
 	p << toString() << endl;
 	p << "Dias a pagar por cesantia (Garantia de Ley) : " << (calcularCesantia(fechaACesar)) << endl;
-	p << "Monto a pagar por censantia: " << (long)((calcularCesantia(fechaACesar))*getPuesto()->getSalarioDiario());
+	p << "Monto a pagar por censantia: " << (long)((calcularCesantia(fechaACesar))*getPuesto()->getSalarioDiario()) << endl;
 	p << "Monto a cancelar de aguinaldo: " << (long)calculcarAguinaldo(fechaACesar) << endl;
 	double suma = ((calcularCesantia(fechaACesar))*getPuesto()->getSalarioDiario()) + calculcarAguinaldo(fechaACesar);
 	fechaCesantia = fechaACesar;
 	activo = false;
 	p << "Total a Cancelar por la empresa: " << (long)suma << endl;
 	activo = false;
-	
+	ofstream registroCese;
+	registroCese.open("ListaExEmpleados.txt", ios::app);
+	if (!registroCese.fail()) {
+		registroCese << p.str() << endl;
+	}
+	else {
+		cout << "Error al abrir el archivo ListaExEmpleados.txt " << endl;
+	}
+	registroCese.close();
 	return p.str();
 }
 
@@ -119,9 +141,19 @@ double ServiciosProfesionales::calculcarAguinaldo(Fecha * aCalcular)
 
 
 
- const string ServiciosProfesionales::imprimirColillaDePago(Fecha* q, double p)
+ const string ServiciosProfesionales::imprimirColillaDePago(Fecha* fechaPago, double p1)
 {
-	return "REALIZAR COLILLA DE SERV PROFESIONALES";
+	 int limite = 1200000;
+	 stringstream p;
+	 p << "Colilla de Pago POR SERVICIOS PROFESIONALES" << "     " << "Fecha: " << fechaPago->toStringFecha() << "    " << "Pago Correspondiente al Mes: " << fechaPago->getMes() << endl;
+	 p << "Cedula: " << getEmpleado()->getCedula() << " " << "Nombre : " << getEmpleado()->getNombre() << " " << getEmpleado()->getApellidos() << endl;
+	 p << "Codigo de Puesto: " << getPuesto()->getCodigo() << "-->" << getPuesto()->getNombre() << endl;
+	 p << "Salario Bruto--> " << (long)getSalarioBruto(p1) << endl;
+	 p << "Dias de cesantia acumuladas: " << calcularCesantia(fechaPago) << endl;
+	 p << "-----------FIN-----------" << endl;
+	 return p.str();
+
+
 }
 
  const string ServiciosProfesionales::retirarAhorros(Fecha * p1)

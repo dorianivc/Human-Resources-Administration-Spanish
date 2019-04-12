@@ -11,7 +11,12 @@ ListaPuestos::ListaPuestos()
 void ListaPuestos::insertar(Puesto * newPuesto)
 {
 	if (existePosicion(newPuesto->getCodigo()) == false) {
-		primero = new NodoPuesto(newPuesto, primero);
+		if (primero == NULL) {
+			primero = new NodoPuesto(newPuesto, NULL);
+		}
+		else {
+			primero = new NodoPuesto(newPuesto, primero);
+		}
 		ofstream puestos("Puestos.txt", ios::app);
 		if (!puestos.bad() && !puestos.fail()) {
 			puestos << newPuesto->getNombre() << "," << newPuesto->getCodigo() << "," << newPuesto->getDescripcion() << "," << newPuesto->getSalarioBase() << ";";
@@ -68,6 +73,19 @@ bool ListaPuestos::existePosicion(int p)
 	}
 }
 
+void ListaPuestos::eliminarFinal()
+{
+	if (primero != NULL) {
+		actual = primero;
+			while (actual->getSiguiente() != NULL) {
+				actual = actual->getSiguiente();
+
+			}
+			delete actual->getSiguiente();
+		
+	}
+}
+
 
 
 Puesto * ListaPuestos::getPosicion(int cod)
@@ -105,7 +123,44 @@ string ListaPuestos::toString()
 
 bool ListaPuestos::eliminarIdentificador(int cod)
 {
-	actual = primero;
+	if (primero != NULL) {
+		actual = primero;
+		NodoPuesto * anterior = actual;
+		NodoPuesto * aux;
+		if (primero->getInfo()->getCodigo() == cod) {
+			actual = primero;
+			primero = actual->getSiguiente();
+			delete actual;
+			return true;
+		}
+		else {
+			
+			while (actual != NULL) {
+				actual = actual->getSiguiente();
+				if (actual->getInfo()->getCodigo() == cod) {
+					if (actual->getSiguiente() == NULL) {
+						
+						return true;
+					}
+					else {
+						anterior->setSiguiente(actual->getSiguiente());
+						aux = actual;
+						cout << actual->toString() << endl;
+						//delete actual;
+						return true;
+
+					}
+				}
+				else {
+					anterior = actual;
+					
+				}
+			}
+			return false;
+		}
+	}
+	else return false;
+	/*actual = primero;
 	NodoPuesto* auxBorrar;
 	NodoPuesto* anterior = actual;
 	auxBorrar = actual;
@@ -133,7 +188,7 @@ bool ListaPuestos::eliminarIdentificador(int cod)
 				return true;
 			}
 	}
-	else return false;
+	else return false;*/
 }
 
 

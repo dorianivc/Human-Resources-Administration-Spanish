@@ -15,6 +15,7 @@ public:
 	int cuentaNodos();
 	bool listaVacia();
 	bool existePosicion(int);
+	void eliminarFinal();
 	Puesto* getPosicion(int);
 	string toString();
 	bool eliminarIdentificador(int);

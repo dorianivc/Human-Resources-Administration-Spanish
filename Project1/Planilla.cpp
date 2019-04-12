@@ -16,9 +16,19 @@ Planilla::Planilla(Fecha* fechaIncio, Empleado* newEmpleado, Puesto* newPuesto,b
 
 }
 
+const void Planilla::setAhorroEscolar(int p)
+{
+	porcentajeAhorroEscol = p;
+}
+
+const void Planilla::setAhorroNavidad(int p)
+{
+	porcentajeAhorroNav = p;
+}
+
 int Planilla::vacacionesAcumuladas(Fecha*p)
 {
-	unsigned dias = getFecha()->Distancia(getFecha(), p);
+	unsigned dias = getFecha()->Distancia(fechaUltimasVacaciones, p);
 	//Calculo de Vacaciones
 	if (dias < 24) {
 		return 0;
@@ -97,6 +107,7 @@ const bool Planilla::pagarAhorro()
 double Planilla::calculcarAguinaldo(Fecha* aCalcular)
 {
 	unsigned dias = getFecha()->Distancia(ultimoPagoAguinaldo, aCalcular);
+
 	double aux = getPuesto()->getSalarioBase() / 360;
 	double aguinaldo = (double)dias*  aux;
 	return aguinaldo;
@@ -202,7 +213,7 @@ double Planilla::getDeducciones(double p)
 	p << "Ahorros:" << endl;
 	p << "Ahorro Navidad: " << ahorroNavidad << endl;
 	p << "Ahorro Escolar: " << ahorroEscolar << endl;
-	p << "aguinaldo::::" << (long)calculcarAguinaldo(fechaPago) << endl;
+	p << "Aguinaldo acumulado a la fecha: " << (long)calculcarAguinaldo(fechaPago) << endl;
 	p << "Dias de Vacaciones::: " << vacacionesAcumuladas(fechaPago) << endl;
 	p << "-----------FIN-----------" << endl;
 	return p.str();
@@ -265,6 +276,15 @@ const string Planilla::cesarEmpleado(Fecha * fechaACesar)
 	porcentajeAhorroEscol = 0;
 	porcentajeAhorroNav = 0;
 	activo = false;
+	fstream registroCese;
+	registroCese.open("ListaExEmpleados.txt", ios::app);
+	if (!registroCese.fail()) {
+		registroCese << p.str() << endl;
+	}
+	else {
+		cout << "Error al abrir el archivo ListaExEmpleados.txt " << endl;
+	}
+	registroCese.close();
 	return p.str();
 	
 }
