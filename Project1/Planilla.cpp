@@ -300,6 +300,7 @@ const string Planilla::toString()
 		p << " POR TIEMPO INDEFINIDO" << endl;
 	}
 	p << "Fecha de Inicio Contrato: " << getFechaToString() << endl;
+	
 	p << getEmpleado()->toString();
 	p << puesto1->toString() << endl;
 	if (activo==true) {
@@ -323,4 +324,5 @@ const string Planilla::toString()
 
 Planilla::~Planilla()
 {
+	delete empleado;
 }

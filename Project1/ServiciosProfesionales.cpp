@@ -167,4 +167,5 @@ double ServiciosProfesionales::calculcarAguinaldo(Fecha * aCalcular)
 
 ServiciosProfesionales::~ServiciosProfesionales()
 {
+	delete empleado;
 }

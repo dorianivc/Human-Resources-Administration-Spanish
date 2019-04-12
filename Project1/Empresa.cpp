@@ -160,6 +160,7 @@ string Empresa::toString()
 
 Empresa::~Empresa()
 {
+	delete fechaActual;
 	delete listaEmpleados;
 	delete puestos;
 }
